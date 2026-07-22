@@ -1,3 +1,52 @@
-baseURL: https://example.org/
-locale: en-us
-title: My New Hugo Project
+baseURL: https://smsm8898.github.io/
+languageCode: ko-kr
+defaultContentLanguage: ko
+title: seungmin.log
+theme: [PaperMod]
+
+enableRobotsTXT: true
+
+pagination:
+  pagerSize: 10
+
+minify:
+  disableXML: true
+
+# Fuse.js 검색 인덱스 (PaperMod 공식 문서의 검색 설정)
+outputs:
+  home: [HTML, RSS, JSON]
+
+# CI 캐시 경로 (Hugo 공식 Pages workflow와 짝)
+caches:
+  images:
+    dir: :cacheDir/images
+
+params:
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowToc: true
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  homeInfoParams:
+    Title: seungmin.log
+    Content: 추천시스템 · 데이터 파이프라인 · 인프라 · 관측성을 공부하고 정리합니다.
+
+menu:
+  main:
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 10
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 40
