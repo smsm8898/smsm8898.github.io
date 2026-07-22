@@ -1,7 +1,7 @@
 baseURL: https://smsm8898.github.io/
 locale: ko-kr
 defaultContentLanguage: ko
-title: seungmin.log
+title: smsm8898.log
 theme: [PaperMod]
 
 enableRobotsTXT: true
@@ -29,8 +29,8 @@ params:
   ShowPostNavLinks: true
   ShowCodeCopyButtons: true
   homeInfoParams:
-    Title: seungmin.log
-    Content: 추천시스템 · 데이터 파이프라인 · 인프라 · 관측성을 공부하고 정리합니다.
+    Title: smsm8898.log
+    Content: 공부하거나 직접 써 본 기술을 정리하고 리뷰합니다.
 
 menu:
   main:
