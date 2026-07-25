@@ -5,7 +5,6 @@ categories: [Observability]
 tags: [Observability, alloy, prometheus, loki, grafana, robusta]
 summary: "메트릭·로그 수집부터 대시보드·알림까지, 관측성 파이프라인 전체를 한눈에 훑는 시리즈 개요."
 series: [Observability Pipeline]
-draft: true
 ---
 
 이 글은 **관측성 파이프라인** 시리즈의 출발점입니다.
