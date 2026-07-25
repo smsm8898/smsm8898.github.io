@@ -7,24 +7,40 @@ summary: ""
 draft: true
 ---
 
-## 사용 예시
+<!-- 어떤 시리즈에 어떤 부분인지 간략 배경 -->
 
-<!-- 어디서 보이는 물건인가 — 실제 화면/대시보드 스크린샷과 함께 -->
+## 1. 정의
+- 
 
-## 문제
+## 2. 종류
+- Prometheus
+  - 직접 수집 -> Prometheus
+  - 역할 및 정의: 
+  - 장점: 
+  - 단점: 
+- Promtail
+  - Agent -> Loki
+  - 역할 및 정의: 
+  - 장점: 
+  - 단점: 
+  
+## 3. 대안
+- Grafana Alloy
+  - 기존 문제점
+    - 
+  - 해결
+    - 
 
-<!-- 이게 없으면 뭐가 안 되나 — 정의보다 문제가 먼저 -->
+## 4. 참고
+1. Grafana Alloy vs OpenTelemetry Collector (다를 게 뭐야?)
+- Alloy의 핵심 엔진(코어)은 OpenTelemetry(OTel) Collector 자체
+- 하지만 '그라파나 생태계(Prometheus, Loki)와의 완벽한 호환성
 
-## 정의
+|구분|OpenTelemetry Collector|Grafana Alloy|
+|---|---|---|
+||||
 
-<!-- 개념·공식, 원 출처 reference 링크 -->
 
-## 비교 — 장점 / 단점 / 대안
+2. Tempo는 왜 전용 수집기(Agent)가 없을까?
+- 
 
-## 구현
-
-<!-- python 구현 또는 설정/구성 예시 (yaml, PromQL, …) — 주제에 맞는 쪽으로 -->
-
-## 참고
-
-<!-- 안 맞는 섹션은 지울 것 — 템플릿은 체크리스트지 강제가 아님 -->
