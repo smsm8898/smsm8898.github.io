@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 500" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="cbarrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1060" height="500" fill="#ffffff"/>
+
+  <text x="530" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#111827">Content-Based — 아이템을 속성으로 표현하고, 프로필과 가까운 것을 찾는다</text>
+
+  <!-- ===== item × attribute table ===== -->
+  <rect x="180" y="90" width="372" height="46" fill="#dbeafe"/>
+
+  <g stroke="#9ca3af" stroke-width="1">
+    <line x1="180" y1="90"  x2="552" y2="90"/>
+    <line x1="180" y1="136" x2="552" y2="136"/>
+    <line x1="180" y1="182" x2="552" y2="182"/>
+    <line x1="180" y1="228" x2="552" y2="228"/>
+    <line x1="180" y1="274" x2="552" y2="274"/>
+    <line x1="180" y1="90" x2="180" y2="274"/>
+    <line x1="242" y1="90" x2="242" y2="274"/>
+    <line x1="304" y1="90" x2="304" y2="274"/>
+    <line x1="366" y1="90" x2="366" y2="274"/>
+    <line x1="428" y1="90" x2="428" y2="274"/>
+    <line x1="490" y1="90" x2="490" y2="274"/>
+    <line x1="552" y1="90" x2="552" y2="274"/>
+  </g>
+
+  <g font-size="11" fill="#374151" text-anchor="middle">
+    <text x="211" y="82">주방가전</text><text x="273" y="82">스포츠</text>
+    <text x="335" y="82">커피</text><text x="397" y="82">운동</text>
+    <text x="459" y="82">전동</text><text x="521" y="82">수동</text>
+  </g>
+
+  <g font-size="12" text-anchor="end">
+    <text x="172" y="118" font-weight="bold" fill="#1d4ed8">상품1 에스프레소 머신</text>
+    <text x="172" y="164" fill="#374151">상품2 커피 그라인더</text>
+    <text x="172" y="210" fill="#374151">상품3 요가 매트</text>
+    <text x="172" y="256" fill="#374151">상품4 드립 케틀</text>
+  </g>
+  <text x="172" y="133" text-anchor="end" font-size="10.5" font-weight="bold" fill="#1d4ed8">유저 D의 이력 ↓</text>
+
+  <g font-size="14" text-anchor="middle">
+    <text x="211" y="118" font-weight="bold" fill="#111827">1</text><text x="273" y="118" fill="#d1d5db">0</text>
+    <text x="335" y="118" font-weight="bold" fill="#111827">1</text><text x="397" y="118" fill="#d1d5db">0</text>
+    <text x="459" y="118" font-weight="bold" fill="#111827">1</text><text x="521" y="118" fill="#d1d5db">0</text>
+
+    <text x="211" y="164" font-weight="bold" fill="#111827">1</text><text x="273" y="164" fill="#d1d5db">0</text>
+    <text x="335" y="164" font-weight="bold" fill="#111827">1</text><text x="397" y="164" fill="#d1d5db">0</text>
+    <text x="459" y="164" font-weight="bold" fill="#111827">1</text><text x="521" y="164" fill="#d1d5db">0</text>
+
+    <text x="211" y="210" fill="#d1d5db">0</text><text x="273" y="210" font-weight="bold" fill="#111827">1</text>
+    <text x="335" y="210" fill="#d1d5db">0</text><text x="397" y="210" font-weight="bold" fill="#111827">1</text>
+    <text x="459" y="210" fill="#d1d5db">0</text><text x="521" y="210" fill="#d1d5db">0</text>
+
+    <text x="211" y="256" font-weight="bold" fill="#111827">1</text><text x="273" y="256" fill="#d1d5db">0</text>
+    <text x="335" y="256" font-weight="bold" fill="#111827">1</text><text x="397" y="256" fill="#d1d5db">0</text>
+    <text x="459" y="256" fill="#d1d5db">0</text><text x="521" y="256" font-weight="bold" fill="#111827">1</text>
+  </g>
+
+  <text x="366" y="296" text-anchor="middle" font-size="13" fill="#374151">아이템 × 속성 (multi-hot) — 재료가 상호작용 행렬이 아니다</text>
+
+  <line x1="366" y1="308" x2="366" y2="336" stroke="#2563eb" stroke-width="2.5" marker-end="url(#cbarrow)"/>
+
+  <!-- ===== profile vector ===== -->
+  <rect x="180" y="344" width="372" height="46" fill="#dbeafe"/>
+  <g stroke="#9ca3af" stroke-width="1">
+    <line x1="180" y1="344" x2="552" y2="344"/>
+    <line x1="180" y1="390" x2="552" y2="390"/>
+    <line x1="180" y1="344" x2="180" y2="390"/>
+    <line x1="242" y1="344" x2="242" y2="390"/>
+    <line x1="304" y1="344" x2="304" y2="390"/>
+    <line x1="366" y1="344" x2="366" y2="390"/>
+    <line x1="428" y1="344" x2="428" y2="390"/>
+    <line x1="490" y1="344" x2="490" y2="390"/>
+    <line x1="552" y1="344" x2="552" y2="390"/>
+  </g>
+  <text x="172" y="372" text-anchor="end" font-size="12" font-weight="bold" fill="#1d4ed8">유저 D 프로필</text>
+  <g font-size="14" text-anchor="middle">
+    <text x="211" y="372" font-weight="bold" fill="#111827">1</text><text x="273" y="372" fill="#d1d5db">0</text>
+    <text x="335" y="372" font-weight="bold" fill="#111827">1</text><text x="397" y="372" fill="#d1d5db">0</text>
+    <text x="459" y="372" font-weight="bold" fill="#111827">1</text><text x="521" y="372" fill="#d1d5db">0</text>
+  </g>
+  <text x="366" y="412" text-anchor="middle" font-size="12.5" fill="#374151">소비한 아이템 속성의 집계 (이력 1개 → 그대로)</text>
+  <text x="366" y="432" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1d4ed8">다른 유저는 전혀 보지 않는다</text>
+
+  <!-- ===== similarity results ===== -->
+  <text x="660" y="82" font-size="14" font-weight="bold" fill="#111827">프로필과의 코사인 유사도</text>
+
+  <text x="660" y="122" font-size="12.5" fill="#374151">상품2 커피 그라인더</text>
+  <rect x="660" y="130" width="220" height="18" fill="#f3f4f6"/>
+  <rect x="660" y="130" width="220" height="18" fill="#86efac"/>
+  <rect x="660" y="130" width="220" height="18" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <text x="892" y="144" font-size="13" font-weight="bold" fill="#15803d">1.00</text>
+  <text x="936" y="144" font-size="12" font-weight="bold" fill="#dc2626">← 추천</text>
+
+  <text x="660" y="180" font-size="12.5" fill="#374151">상품4 드립 케틀</text>
+  <rect x="660" y="188" width="220" height="18" fill="#f3f4f6"/>
+  <rect x="660" y="188" width="147" height="18" fill="#bbf7d0"/>
+  <text x="892" y="202" font-size="13" fill="#374151">0.67</text>
+
+  <text x="660" y="238" font-size="12.5" fill="#374151">상품3 요가 매트</text>
+  <rect x="660" y="246" width="220" height="18" fill="#f3f4f6"/>
+  <text x="892" y="260" font-size="13" fill="#374151">0.00</text>
+
+  <g font-size="12.5" fill="#374151">
+    <text x="660" y="300">• 상품2 — 속성이 상품1과 완전히 같다</text>
+    <text x="660" y="324">• 상품4 — 커피·주방가전은 같고 전동/수동이 다르다</text>
+    <text x="660" y="348">• 상품3 — 겹치는 속성이 하나도 없다</text>
+    <text x="660" y="378" fill="#6b7280">이미 본 상품1은 후보에서 제외</text>
+  </g>
+
+  <!-- ===== punchline (full width, bottom) ===== -->
+  <line x1="120" y1="452" x2="940" y2="452" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="530" y="476" text-anchor="middle" font-size="13" font-weight="bold" fill="#b45309">CF의 i2i 그림도 유저 D에게 상품2를 추천했다 — 같은 답, 다른 근거.</text>
+  <text x="530" y="494" text-anchor="middle" font-size="12.5" fill="#b45309">CF는 "다른 사람들이 함께 샀으니까", CB는 "속성이 비슷하니까".</text>
+</svg>

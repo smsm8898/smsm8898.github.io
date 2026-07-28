@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="vecarrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="400" fill="#ffffff"/>
+
+  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#111827">같은 아이템을 표현하는 두 방식 — 단어를 세느냐, 의미를 배우느냐</text>
+
+  <!-- ================= LEFT: sparse ================= -->
+  <text x="250" y="62" text-anchor="middle" font-size="15" font-weight="bold" fill="#111827">Sparse / Lexical (TF-IDF)</text>
+
+  <g stroke="#9ca3af" stroke-width="1">
+    <line x1="150" y1="100" x2="450" y2="100"/>
+    <line x1="150" y1="140" x2="450" y2="140"/>
+    <line x1="150" y1="180" x2="450" y2="180"/>
+    <line x1="150" y1="220" x2="450" y2="220"/>
+    <line x1="150" y1="100" x2="150" y2="220"/>
+    <line x1="200" y1="100" x2="200" y2="220"/>
+    <line x1="250" y1="100" x2="250" y2="220"/>
+    <line x1="300" y1="100" x2="300" y2="220"/>
+    <line x1="350" y1="100" x2="350" y2="220"/>
+    <line x1="400" y1="100" x2="400" y2="220"/>
+    <line x1="450" y1="100" x2="450" y2="220"/>
+  </g>
+
+  <!-- vocabulary headers -->
+  <g font-size="10.5" fill="#374151" text-anchor="middle">
+    <text x="175" y="92">커피</text><text x="225" y="92">머신</text>
+    <text x="275" y="92">에스프레소</text><text x="325" y="92">기계</text>
+    <text x="375" y="92">요가</text><text x="425" y="92">매트</text>
+  </g>
+
+  <!-- row labels -->
+  <g font-size="12" text-anchor="end" fill="#374151">
+    <text x="142" y="125">"커피 머신"</text>
+    <text x="142" y="165">"에스프레소 기계"</text>
+    <text x="142" y="205">"요가 매트"</text>
+  </g>
+
+  <g font-size="13" text-anchor="middle">
+    <text x="175" y="125" font-weight="bold" fill="#111827">1</text><text x="225" y="125" font-weight="bold" fill="#111827">1</text>
+    <text x="275" y="125" fill="#d1d5db">0</text><text x="325" y="125" fill="#d1d5db">0</text>
+    <text x="375" y="125" fill="#d1d5db">0</text><text x="425" y="125" fill="#d1d5db">0</text>
+
+    <text x="175" y="165" fill="#d1d5db">0</text><text x="225" y="165" fill="#d1d5db">0</text>
+    <text x="275" y="165" font-weight="bold" fill="#111827">1</text><text x="325" y="165" font-weight="bold" fill="#111827">1</text>
+    <text x="375" y="165" fill="#d1d5db">0</text><text x="425" y="165" fill="#d1d5db">0</text>
+
+    <text x="175" y="205" fill="#d1d5db">0</text><text x="225" y="205" fill="#d1d5db">0</text>
+    <text x="275" y="205" fill="#d1d5db">0</text><text x="325" y="205" fill="#d1d5db">0</text>
+    <text x="375" y="205" font-weight="bold" fill="#111827">1</text><text x="425" y="205" font-weight="bold" fill="#111827">1</text>
+  </g>
+
+  <text x="300" y="244" text-anchor="middle" font-size="12" fill="#6b7280">단어 하나가 차원 하나 — 어휘 수만큼 차원이 늘어난다</text>
+
+  <g font-size="13">
+    <text x="150" y="284" fill="#374151">cos("커피 머신", "에스프레소 기계") = <tspan font-weight="bold" fill="#dc2626">0.00</tspan></text>
+    <text x="150" y="308" fill="#374151">cos("커피 머신", "요가 매트") = <tspan font-weight="bold" fill="#dc2626">0.00</tspan></text>
+  </g>
+  <text x="150" y="344" font-size="12.5" font-weight="bold" fill="#dc2626">겹치는 단어가 없으면 전부 0 —</text>
+  <text x="150" y="364" font-size="12.5" fill="#dc2626">가까운 쌍과 먼 쌍을 구분할 수 없다.</text>
+
+  <!-- divider -->
+  <line x1="500" y1="60" x2="500" y2="370" stroke="#e5e7eb" stroke-width="1.5"/>
+
+  <!-- ================= RIGHT: dense ================= -->
+  <text x="750" y="62" text-anchor="middle" font-size="15" font-weight="bold" fill="#111827">Dense / Semantic (임베딩)</text>
+
+  <!-- axes -->
+  <line x1="560" y1="290" x2="960" y2="290" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="560" y1="290" x2="560" y2="90" stroke="#9ca3af" stroke-width="1.5"/>
+
+  <!-- vectors from origin (560,290) -->
+  <line x1="560" y1="290" x2="578" y2="108" stroke="#2563eb" stroke-width="2.5" marker-end="url(#vecarrow)"/>
+  <line x1="560" y1="290" x2="652" y2="126" stroke="#2563eb" stroke-width="2.5" marker-end="url(#vecarrow)"/>
+  <line x1="560" y1="290" x2="932" y2="262" stroke="#9ca3af" stroke-width="2.5" marker-end="url(#vecarrow)"/>
+
+  <g font-size="12" fill="#1d4ed8" font-weight="bold">
+    <text x="588" y="106">"커피 머신"</text>
+    <text x="662" y="126">"에스프레소 기계"</text>
+  </g>
+  <text x="852" y="252" font-size="12" fill="#6b7280" font-weight="bold">"요가 매트"</text>
+
+  <!-- small angle marker between the two blue vectors -->
+  <path d="M 567 194 A 100 100 0 0 1 606 205" fill="none" stroke="#dc2626" stroke-width="1.6"/>
+  <text x="600" y="188" font-size="11.5" fill="#dc2626" font-weight="bold">작은 각</text>
+
+  <text x="750" y="316" text-anchor="middle" font-size="12" fill="#6b7280">차원은 수백 개 — 각 축은 사람이 해석하기 어렵다</text>
+
+  <g font-size="13">
+    <text x="560" y="352" fill="#374151">cos("커피 머신", "에스프레소 기계") = <tspan font-weight="bold" fill="#15803d">0.94</tspan></text>
+    <text x="560" y="376" fill="#374151">cos("커피 머신", "요가 매트") = <tspan font-weight="bold" fill="#374151">0.17</tspan></text>
+  </g>
+</svg>
