@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 430" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="hyarrow" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1020" height="430" fill="#ffffff"/>
+
+  <text x="510" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#111827">어디서 합치는가 — 결합의 세 지점</text>
+
+  <!-- ============ Panel 1: late fusion ============ -->
+  <text x="170" y="66" text-anchor="middle" font-size="15" font-weight="bold" fill="#1d4ed8">① 결과를 합친다</text>
+  <text x="170" y="86" text-anchor="middle" font-size="12" fill="#6b7280">late fusion</text>
+
+  <rect x="60" y="104" width="98" height="42" rx="4" fill="#dbeafe" stroke="#93c5fd"/>
+  <text x="109" y="130" text-anchor="middle" font-size="12.5" fill="#1e3a8a">CF 모델</text>
+  <rect x="182" y="104" width="98" height="42" rx="4" fill="#dcfce7" stroke="#86efac"/>
+  <text x="231" y="130" text-anchor="middle" font-size="12.5" fill="#14532d">CB 모델</text>
+
+  <line x1="109" y1="150" x2="109" y2="178" stroke="#6b7280" stroke-width="1.8" marker-end="url(#hyarrow)"/>
+  <line x1="231" y1="150" x2="231" y2="178" stroke="#6b7280" stroke-width="1.8" marker-end="url(#hyarrow)"/>
+
+  <rect x="60" y="184" width="98" height="38" rx="4" fill="#f9fafb" stroke="#d1d5db"/>
+  <text x="109" y="208" text-anchor="middle" font-size="12" fill="#374151">후보 목록 A</text>
+  <rect x="182" y="184" width="98" height="38" rx="4" fill="#f9fafb" stroke="#d1d5db"/>
+  <text x="231" y="208" text-anchor="middle" font-size="12" fill="#374151">후보 목록 B</text>
+
+  <line x1="109" y1="226" x2="150" y2="256" stroke="#6b7280" stroke-width="1.8" marker-end="url(#hyarrow)"/>
+  <line x1="231" y1="226" x2="190" y2="256" stroke="#6b7280" stroke-width="1.8" marker-end="url(#hyarrow)"/>
+
+  <rect x="86" y="262" width="168" height="42" rx="4" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="170" y="288" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#92400e">순위 결합 (RRF·가중합)</text>
+
+  <line x1="170" y1="308" x2="170" y2="336" stroke="#6b7280" stroke-width="1.8" marker-end="url(#hyarrow)"/>
+  <rect x="106" y="342" width="128" height="38" rx="4" fill="#111827"/>
+  <text x="170" y="366" text-anchor="middle" font-size="12.5" fill="#ffffff">최종 추천</text>
+
+  <text x="170" y="404" text-anchor="middle" font-size="11.5" fill="#6b7280">모델은 그대로, 결과만 섞는다</text>
+  <text x="170" y="420" text-anchor="middle" font-size="11.5" fill="#6b7280">가장 흔하고 갈아끼우기 쉽다</text>
+
+  <line x1="340" y1="60" x2="340" y2="410" stroke="#e5e7eb" stroke-width="1.5"/>
+
+  <!-- ============ Panel 2: early fusion ============ -->
+  <text x="510" y="66" text-anchor="middle" font-size="15" font-weight="bold" fill="#1d4ed8">② 재료를 합친다</text>
+  <text x="510" y="86" text-anchor="middle" font-size="12" fill="#6b7280">early fusion</text>
+
+  <rect x="400" y="104" width="98" height="42" rx="4" fill="#dbeafe" stroke="#93c5fd"/>
+  <text x="449" y="123" text-anchor="middle" font-size="12" fill="#1e3a8a">행동 이력</text>
+  <text x="449" y="139" text-anchor="middle" font-size="10.5" fill="#3b82f6">(CF의 재료)</text>
+  <rect x="522" y="104" width="98" height="42" rx="4" fill="#dcfce7" stroke="#86efac"/>
+  <text x="571" y="123" text-anchor="middle" font-size="12" fill="#14532d">아이템 속성</text>
+  <text x="571" y="139" text-anchor="middle" font-size="10.5" fill="#22c55e">(CB의 재료)</text>
+
+  <line x1="449" y1="150" x2="490" y2="196" stroke="#6b7280" stroke-width="1.8" marker-end="url(#hyarrow)"/>
+  <line x1="571" y1="150" x2="530" y2="196" stroke="#6b7280" stroke-width="1.8" marker-end="url(#hyarrow)"/>
+
+  <rect x="416" y="202" width="188" height="52" rx="4" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="510" y="223" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#92400e">하나의 모델</text>
+  <text x="510" y="242" text-anchor="middle" font-size="11.5" fill="#92400e">(FM·LightFM 등)</text>
+
+  <line x1="510" y1="258" x2="510" y2="336" stroke="#6b7280" stroke-width="1.8" marker-end="url(#hyarrow)"/>
+  <rect x="446" y="342" width="128" height="38" rx="4" fill="#111827"/>
+  <text x="510" y="366" text-anchor="middle" font-size="12.5" fill="#ffffff">최종 추천</text>
+
+  <text x="510" y="404" text-anchor="middle" font-size="11.5" fill="#6b7280">두 재료를 한 모델이 함께 학습</text>
+  <text x="510" y="420" text-anchor="middle" font-size="11.5" fill="#6b7280">상호작용까지 잡지만 학습이 무겁다</text>
+
+  <line x1="680" y1="60" x2="680" y2="410" stroke="#e5e7eb" stroke-width="1.5"/>
+
+  <!-- ============ Panel 3: cascade ============ -->
+  <text x="850" y="66" text-anchor="middle" font-size="15" font-weight="bold" fill="#1d4ed8">③ 단계를 잇는다</text>
+  <text x="850" y="86" text-anchor="middle" font-size="12" fill="#6b7280">cascade / meta-level</text>
+
+  <rect x="786" y="104" width="128" height="42" rx="4" fill="#dbeafe" stroke="#93c5fd"/>
+  <text x="850" y="130" text-anchor="middle" font-size="12.5" fill="#1e3a8a">CF 모델</text>
+
+  <line x1="850" y1="150" x2="850" y2="178" stroke="#6b7280" stroke-width="1.8" marker-end="url(#hyarrow)"/>
+  <rect x="762" y="184" width="176" height="38" rx="4" fill="#f9fafb" stroke="#d1d5db"/>
+  <text x="850" y="208" text-anchor="middle" font-size="12" fill="#374151">넓은 후보 (수백 개)</text>
+
+  <line x1="850" y1="226" x2="850" y2="256" stroke="#6b7280" stroke-width="1.8" marker-end="url(#hyarrow)"/>
+  <rect x="786" y="262" width="128" height="42" rx="4" fill="#dcfce7" stroke="#86efac" stroke-width="1.5"/>
+  <text x="850" y="281" text-anchor="middle" font-size="12.5" fill="#14532d">CB로 정렬</text>
+  <text x="850" y="297" text-anchor="middle" font-size="10.5" fill="#22c55e">(좁은 후보만 처리)</text>
+
+  <line x1="850" y1="308" x2="850" y2="336" stroke="#6b7280" stroke-width="1.8" marker-end="url(#hyarrow)"/>
+  <rect x="786" y="342" width="128" height="38" rx="4" fill="#111827"/>
+  <text x="850" y="366" text-anchor="middle" font-size="12.5" fill="#ffffff">최종 추천</text>
+
+  <text x="850" y="404" text-anchor="middle" font-size="11.5" fill="#6b7280">앞이 좁히고 뒤가 다듬는다</text>
+  <text x="850" y="420" text-anchor="middle" font-size="11.5" fill="#6b7280">뒤 단계에 비싼 모델을 쓸 수 있다</text>
+</svg>

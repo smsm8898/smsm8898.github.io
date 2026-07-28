@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 500" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="rrfarrow" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1060" height="500" fill="#ffffff"/>
+
+  <text x="530" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#111827">RRF — 점수를 버리고 순위만 더한다</text>
+  <text x="530" y="54" text-anchor="middle" font-size="13.5" fill="#374151">score(아이템) = Σ 1 / (k + 각 목록에서의 순위), k = 60</text>
+
+  <!-- ============ CF list ============ -->
+  <text x="60" y="94" font-size="13.5" font-weight="bold" fill="#1e3a8a">CF 후보 (유저 D)</text>
+  <text x="60" y="112" font-size="11" fill="#6b7280">MF 예측 점수</text>
+
+  <g font-size="12.5">
+    <rect x="60" y="122" width="230" height="34" fill="#dbeafe"/>
+    <text x="72" y="144" fill="#111827">1. 상품2 커피 그라인더</text>
+    <text x="278" y="144" text-anchor="end" fill="#1e3a8a">0.7</text>
+
+    <rect x="60" y="160" width="230" height="34" fill="#eff6ff"/>
+    <text x="72" y="182" fill="#111827">2. 상품4 드립 케틀</text>
+    <text x="278" y="182" text-anchor="end" fill="#1e3a8a">0.6</text>
+
+    <rect x="60" y="198" width="230" height="34" fill="#eff6ff"/>
+    <text x="72" y="220" fill="#111827">3. 상품3 요가 매트</text>
+    <text x="278" y="220" text-anchor="end" fill="#1e3a8a">0.2</text>
+  </g>
+  <text x="60" y="254" font-size="11.5" fill="#6b7280">상품5(신상품)는 행동이 0이라 목록에 없다</text>
+
+  <!-- ============ CB list ============ -->
+  <text x="60" y="300" font-size="13.5" font-weight="bold" fill="#14532d">CB 후보 (유저 D)</text>
+  <text x="60" y="318" font-size="11" fill="#6b7280">속성 코사인 유사도</text>
+
+  <g font-size="12.5">
+    <rect x="60" y="328" width="230" height="34" fill="#dcfce7"/>
+    <text x="72" y="350" fill="#111827">1. 상품2 커피 그라인더</text>
+    <text x="278" y="350" text-anchor="end" fill="#14532d">1.00</text>
+
+    <rect x="60" y="366" width="230" height="34" fill="#f0fdf4"/>
+    <text x="72" y="388" fill="#111827">2. 상품5 콜드브루 메이커</text>
+    <text x="278" y="388" text-anchor="end" fill="#14532d">0.82</text>
+
+    <rect x="60" y="404" width="230" height="34" fill="#f0fdf4"/>
+    <text x="72" y="426" fill="#111827">3. 상품4 드립 케틀</text>
+    <text x="278" y="426" text-anchor="end" fill="#14532d">0.67</text>
+  </g>
+  <text x="60" y="460" font-size="11.5" fill="#6b7280">상품3(요가 매트)은 겹치는 속성이 0이라 목록에 없다</text>
+
+  <line x1="308" y1="130" x2="344" y2="130" stroke="#6b7280" stroke-width="1.8" marker-end="url(#rrfarrow)"/>
+  <line x1="308" y1="336" x2="344" y2="336" stroke="#6b7280" stroke-width="1.8" marker-end="url(#rrfarrow)"/>
+
+  <!-- ============ RRF table ============ -->
+  <text x="370" y="94" font-size="13.5" font-weight="bold" fill="#92400e">순위만 더한 결과</text>
+
+  <g stroke="#9ca3af" stroke-width="1">
+    <line x1="370" y1="106" x2="1000" y2="106"/>
+    <line x1="370" y1="136" x2="1000" y2="136"/>
+    <line x1="370" y1="176" x2="1000" y2="176"/>
+    <line x1="370" y1="216" x2="1000" y2="216"/>
+    <line x1="370" y1="256" x2="1000" y2="256"/>
+    <line x1="370" y1="296" x2="1000" y2="296"/>
+    <line x1="370" y1="106" x2="370" y2="296"/>
+    <line x1="540" y1="106" x2="540" y2="296"/>
+    <line x1="700" y1="106" x2="700" y2="296"/>
+    <line x1="860" y1="106" x2="860" y2="296"/>
+    <line x1="1000" y1="106" x2="1000" y2="296"/>
+  </g>
+
+  <g font-size="12" fill="#374151" font-weight="bold" text-anchor="middle">
+    <text x="455" y="126">아이템</text>
+    <text x="620" y="126">CF 기여</text>
+    <text x="780" y="126">CB 기여</text>
+    <text x="930" y="126">합계</text>
+  </g>
+
+  <!-- row 1: 상품2 -->
+  <rect x="370" y="136" width="630" height="40" fill="#fef9c3"/>
+  <rect x="370" y="136" width="630" height="40" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <text x="382" y="161" font-size="12.5" font-weight="bold" fill="#111827">상품2 커피 그라인더</text>
+  <text x="620" y="161" text-anchor="middle" font-size="12" fill="#374151">1/(60+1) = .0164</text>
+  <text x="780" y="161" text-anchor="middle" font-size="12" fill="#374151">1/(60+1) = .0164</text>
+  <text x="930" y="161" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#b45309">.0328</text>
+
+  <!-- row 2: 상품4 -->
+  <text x="382" y="201" font-size="12.5" fill="#111827">상품4 드립 케틀</text>
+  <text x="620" y="201" text-anchor="middle" font-size="12" fill="#374151">1/(60+2) = .0161</text>
+  <text x="780" y="201" text-anchor="middle" font-size="12" fill="#374151">1/(60+3) = .0159</text>
+  <text x="930" y="201" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#b45309">.0320</text>
+
+  <!-- row 3: 상품5 -->
+  <rect x="370" y="216" width="630" height="40" fill="#f0fdf4"/>
+  <g stroke="#9ca3af" stroke-width="1">
+    <line x1="370" y1="216" x2="1000" y2="216"/>
+    <line x1="370" y1="256" x2="1000" y2="256"/>
+    <line x1="540" y1="216" x2="540" y2="256"/>
+    <line x1="700" y1="216" x2="700" y2="256"/>
+    <line x1="860" y1="216" x2="860" y2="256"/>
+    <line x1="370" y1="216" x2="370" y2="256"/>
+    <line x1="1000" y1="216" x2="1000" y2="256"/>
+  </g>
+  <text x="382" y="234" font-size="12.5" fill="#111827">상품5 콜드브루 메이커</text>
+  <text x="382" y="249" font-size="10.5" font-weight="bold" fill="#15803d">신상품 — CF는 모른다</text>
+  <text x="620" y="241" text-anchor="middle" font-size="12" fill="#9ca3af">없음 → 0</text>
+  <text x="780" y="241" text-anchor="middle" font-size="12" fill="#374151">1/(60+2) = .0161</text>
+  <text x="930" y="241" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#b45309">.0161</text>
+
+  <!-- row 4: 상품3 -->
+  <text x="382" y="281" font-size="12.5" fill="#111827">상품3 요가 매트</text>
+  <text x="620" y="281" text-anchor="middle" font-size="12" fill="#374151">1/(60+3) = .0159</text>
+  <text x="780" y="281" text-anchor="middle" font-size="12" fill="#9ca3af">없음 → 0</text>
+  <text x="930" y="281" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#b45309">.0159</text>
+
+  <!-- final order -->
+  <text x="370" y="336" font-size="13.5" font-weight="bold" fill="#111827">최종 순위</text>
+  <g font-size="12.5" fill="#374151">
+    <text x="370" y="362">상품2 &gt; 상품4 &gt; <tspan font-weight="bold" fill="#15803d">상품5</tspan> &gt; 상품3</text>
+  </g>
+
+  <g font-size="12.5" fill="#374151">
+    <text x="370" y="396">• <tspan font-weight="bold" fill="#15803d">상품5</tspan> — CF가 전혀 모르는 신상품이 CB 덕에 후보에 올랐다 (아이템 콜드스타트 보완)</text>
+    <text x="370" y="420">• <tspan font-weight="bold">상품3</tspan> — CF만 알고 CB가 0이라 맨 아래로. 한쪽 신호만으로는 밀린다</text>
+    <text x="370" y="444">• 두 목록 모두 1위인 <tspan font-weight="bold">상품2</tspan>가 최상단 — 합의된 후보가 강해진다</text>
+  </g>
+
+  <text x="370" y="480" font-size="12.5" font-weight="bold" fill="#b45309">CF의 0.7과 CB의 1.00은 애초에 비교할 수 없는 값이다. 순위만 쓰면 스케일 문제가 사라진다.</text>
+</svg>

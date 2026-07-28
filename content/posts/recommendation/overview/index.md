@@ -2,8 +2,8 @@
 title: "Recommendation"
 date: 2026-07-27T09:00:00+09:00
 categories: [Recommendation]
-tags: [Recommendation, CF, Content-Based, Embedding, Hybrid]
-summary: "비개인화 인기 랭킹부터 CF·콘텐츠 기반·임베딩·하이브리드까지 — 추천 알고리즘의 개념 지도를 그리는 시리즈 개요."
+tags: [Recommendation, CF, Content-Based, Hybrid, Deep Learning]
+summary: "비개인화 인기 랭킹부터 CF·콘텐츠 기반·하이브리드까지, 그리고 그 뒤의 딥러닝 축 — 추천 알고리즘의 개념 지도를 그리는 시리즈 개요."
 series: [Recommendation]
 ---
 
@@ -25,10 +25,10 @@ series: [Recommendation]
 | Popular (비개인화) | 인기를 시간 감쇠로 집계 — "역대"가 아닌 "요즘" 인기 | 인기 신호 |
 | Collaborative Filtering | "너와 비슷한 사람들이 좋아한 것" — 취향의 유사성은 행동에 드러난다 | 행동 이력 |
 | Content-Based | "네가 좋아한 것과 속성이 비슷한 것" | 아이템 속성 + 개인 이력 |
-| Embedding & Vector Search | 유저·아이템을 같은 벡터 공간에 표현하고 최근접 이웃을 검색 — MF부터 two-tower·시퀀스 모델까지, CF·CB의 현대적 수렴 | 행동 이력·속성 모두 |
 | Hybrid | 계열들의 결합 — 서로의 약점(콜드스타트·필터 버블·인기 편향)을 보완 | 위 전부 |
 
-* 표의 한 줄이 시리즈의 한 편이 된다 — Popular 편 완료, 나머지는 위에서 아래 순서로.
+* 표의 한 줄이 시리즈의 한 편이 된다 — Popular·Collaborative Filtering·Content-Based 완료, 다음은 Hybrid.
+* 네 줄이 곧 고전 분류(교과서 분류)다. 그 뒤는 **딥러닝 축**이 별도 트랙으로 이어진다 — 사람이 정한 유사도·규칙 대신 **표현 자체를 학습**하는 계열로, 임베딩과 벡터 검색(최근접 이웃 서빙), 그리고 신경망 랭킹 모델이 여기에 속한다. MF가 그 원형이었다는 점에서 CF·CB의 현대적 수렴이기도 하다.
 
 ## 4. 구체적 사례 — 왜 하나로는 안 되는가
 1. 첫 방문 사용자: 이력이 없어 개인화가 불가능 → **Popular**가 받는다 (유저 콜드스타트)
