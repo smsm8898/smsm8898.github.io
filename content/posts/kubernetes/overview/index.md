@@ -71,12 +71,12 @@ git deploy key로 쓰이고, 세 곳 모두 AWS Secrets Manager에서 CSI로 가
 계층 순서대로 쌓는다. 앞 편의 리소스를 뒤 편이 참조하는 구조다 — 워크로드가 있어야 노출할
 대상이 있고, 그 다음에야 스케줄링과 오토스케일링을 말할 수 있다.
 
-1. **워크로드** *(예정)* : Pod와 컨트롤러 6종. 무엇을 언제 쓰나, 그리고 직접 만들지 않고 위임하는 두 가지 방식
-2. **네트워크** *(예정)* : ClusterIP와 headless의 차이, Ingress에서 ALB로 이어지는 경로
-3. **설정·시크릿** *(예정)* : ConfigMap의 여러 마운트 방식, Secrets Manager → CSI → Secret → env 체인
-4. **스케줄링** *(예정)* : nodeSelector만으로 부족한 이유(taint), QoS 등급이 축출 순서를 바꾸는 방식
-5. **오토스케일링** *(예정)* : HPA와 replicas의 충돌, PDB가 노드 작업을 막는 방식
-6. **CRD · Operator** *(예정)* : 리소스 종류를 추가하는 법과, 그 리소스가 다시 워크로드를 만드는 구조
+1. [워크로드](../workload/) : Pod와 컨트롤러 6종. 무엇을 언제 쓰나, 그리고 직접 만들지 않고 위임하는 두 가지 방식
+2. [네트워크](../network/) : ClusterIP와 headless의 차이, Ingress에서 ALB로 이어지는 경로
+3. [설정·시크릿](../config-secret/) : ConfigMap의 여러 마운트 방식, Secrets Manager → CSI → Secret → env 체인
+4. [스케줄링](../scheduling/) : nodeSelector만으로 부족한 이유(taint), QoS 등급이 축출 순서를 바꾸는 방식
+5. [오토스케일링 · 중단](../autoscaling/) : HPA와 replicas의 충돌, PDB가 노드 작업을 막는 방식
+6. [CRD · Operator](../crd-operator/) : 리소스 종류를 추가하는 법과, 그 리소스가 다시 워크로드를 만드는 구조
 
 ## 참고
 
