@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="980" height="420" fill="#ffffff"/>
+
+  <!-- ===================== Left panel: User-Based (u2i) ===================== -->
+  <text x="245" y="34" text-anchor="middle" font-size="18" font-weight="bold" fill="#111827">User-Based (u2i) — 행(사용자) 간 유사도</text>
+
+  <!-- row highlights: rows A and B -->
+  <rect x="98" y="88" width="312" height="60" fill="#dbeafe"/>
+  <rect x="98" y="148" width="312" height="60" fill="#dbeafe"/>
+
+  <!-- column headers -->
+  <text x="137" y="78" text-anchor="middle" font-size="14" fill="#374151">상품1</text>
+  <text x="215" y="78" text-anchor="middle" font-size="14" fill="#374151">상품2</text>
+  <text x="293" y="78" text-anchor="middle" font-size="14" fill="#374151">상품3</text>
+  <text x="371" y="78" text-anchor="middle" font-size="14" fill="#374151">상품4</text>
+
+  <!-- row labels -->
+  <text x="88" y="124" text-anchor="end" font-size="14" font-weight="bold" fill="#1d4ed8">유저 A</text>
+  <text x="88" y="184" text-anchor="end" font-size="14" font-weight="bold" fill="#1d4ed8">유저 B</text>
+  <text x="88" y="244" text-anchor="end" font-size="14" fill="#374151">유저 C</text>
+  <text x="88" y="304" text-anchor="end" font-size="14" fill="#374151">유저 D</text>
+
+  <!-- grid -->
+  <g stroke="#9ca3af" stroke-width="1">
+    <line x1="98" y1="88"  x2="410" y2="88"/>
+    <line x1="98" y1="148" x2="410" y2="148"/>
+    <line x1="98" y1="208" x2="410" y2="208"/>
+    <line x1="98" y1="268" x2="410" y2="268"/>
+    <line x1="98" y1="328" x2="410" y2="328"/>
+    <line x1="98"  y1="88" x2="98"  y2="328"/>
+    <line x1="176" y1="88" x2="176" y2="328"/>
+    <line x1="254" y1="88" x2="254" y2="328"/>
+    <line x1="332" y1="88" x2="332" y2="328"/>
+    <line x1="410" y1="88" x2="410" y2="328"/>
+  </g>
+
+  <!-- checks: A(1,2), B(1,2,4), C(3), D(1) -->
+  <g font-size="22" font-weight="bold" fill="#16a34a" text-anchor="middle">
+    <text x="137" y="126">✓</text><text x="215" y="126">✓</text>
+    <text x="137" y="186">✓</text><text x="215" y="186">✓</text><text x="371" y="186">✓</text>
+    <text x="293" y="246">✓</text>
+    <text x="137" y="306">✓</text>
+  </g>
+  <!-- prediction cell: A x 상품4 -->
+  <text x="371" y="127" text-anchor="middle" font-size="22" font-weight="bold" fill="#dc2626">?</text>
+
+  <!-- arrow: B's 상품4 -> A's 상품4 -->
+  <line x1="371" y1="166" x2="371" y2="138" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <text x="254" y="362" text-anchor="middle" font-size="14.5" fill="#374151">행이 비슷한 A와 B (상품1·2를 같이 좋아함)</text>
+  <text x="254" y="384" text-anchor="middle" font-size="14.5" fill="#374151">→ B가 좋아한 <tspan font-weight="bold">상품4</tspan>를 A에게 추천</text>
+
+  <!-- ===================== Right panel: Item-Based (i2i) ===================== -->
+  <text x="735" y="34" text-anchor="middle" font-size="18" font-weight="bold" fill="#111827">Item-Based (i2i) — 열(아이템) 간 유사도</text>
+
+  <!-- column highlights: 상품1, 상품2 -->
+  <rect x="588" y="88" width="78" height="240" fill="#dcfce7"/>
+  <rect x="666" y="88" width="78" height="240" fill="#dcfce7"/>
+
+  <!-- column headers -->
+  <text x="627" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#15803d">상품1</text>
+  <text x="705" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#15803d">상품2</text>
+  <text x="783" y="78" text-anchor="middle" font-size="14" fill="#374151">상품3</text>
+  <text x="861" y="78" text-anchor="middle" font-size="14" fill="#374151">상품4</text>
+
+  <!-- row labels -->
+  <text x="578" y="124" text-anchor="end" font-size="14" fill="#374151">유저 A</text>
+  <text x="578" y="184" text-anchor="end" font-size="14" fill="#374151">유저 B</text>
+  <text x="578" y="244" text-anchor="end" font-size="14" fill="#374151">유저 C</text>
+  <text x="578" y="304" text-anchor="end" font-size="14" fill="#374151">유저 D</text>
+
+  <!-- grid -->
+  <g stroke="#9ca3af" stroke-width="1">
+    <line x1="588" y1="88"  x2="900" y2="88"/>
+    <line x1="588" y1="148" x2="900" y2="148"/>
+    <line x1="588" y1="208" x2="900" y2="208"/>
+    <line x1="588" y1="268" x2="900" y2="268"/>
+    <line x1="588" y1="328" x2="900" y2="328"/>
+    <line x1="588" y1="88" x2="588" y2="328"/>
+    <line x1="666" y1="88" x2="666" y2="328"/>
+    <line x1="744" y1="88" x2="744" y2="328"/>
+    <line x1="822" y1="88" x2="822" y2="328"/>
+    <line x1="900" y1="88" x2="900" y2="328"/>
+  </g>
+
+  <!-- checks: A(1,2), B(1,2,4), C(3), D(1) -->
+  <g font-size="22" font-weight="bold" fill="#16a34a" text-anchor="middle">
+    <text x="627" y="126">✓</text><text x="705" y="126">✓</text>
+    <text x="627" y="186">✓</text><text x="705" y="186">✓</text><text x="861" y="186">✓</text>
+    <text x="783" y="246">✓</text>
+    <text x="627" y="306">✓</text>
+  </g>
+  <!-- prediction cell: D x 상품2 -->
+  <text x="705" y="307" text-anchor="middle" font-size="22" font-weight="bold" fill="#dc2626">?</text>
+
+  <!-- arrow: D's 상품1 -> D's 상품2 -->
+  <line x1="649" y1="298" x2="683" y2="298" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <text x="744" y="362" text-anchor="middle" font-size="14.5" fill="#374151">열이 비슷한 상품1과 2 (A·B가 함께 소비)</text>
+  <text x="744" y="384" text-anchor="middle" font-size="14.5" fill="#374151">→ 상품1을 본 D에게 <tspan font-weight="bold">상품2</tspan>를 추천</text>
+</svg>

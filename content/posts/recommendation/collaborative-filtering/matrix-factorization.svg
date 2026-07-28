@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 620" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <rect x="0" y="0" width="980" height="620" fill="#ffffff"/>
+
+  <text x="490" y="34" text-anchor="middle" font-size="18" font-weight="bold" fill="#111827">Model-Based — 같은 행렬을 분해해 표현(벡터)을 학습한다</text>
+
+  <!-- ============================================================ -->
+  <!-- Row 1: R ≈ P × Qᵀ                                            -->
+  <!-- ============================================================ -->
+
+  <!-- observed cells in R -->
+  <g fill="#dcfce7">
+    <rect x="130" y="100" width="46" height="46"/>
+    <rect x="176" y="100" width="46" height="46"/>
+    <rect x="130" y="146" width="46" height="46"/>
+    <rect x="176" y="146" width="46" height="46"/>
+    <rect x="268" y="146" width="46" height="46"/>
+    <rect x="222" y="192" width="46" height="46"/>
+    <rect x="130" y="238" width="46" height="46"/>
+  </g>
+
+  <!-- R grid -->
+  <g stroke="#9ca3af" stroke-width="1">
+    <line x1="130" y1="100" x2="314" y2="100"/>
+    <line x1="130" y1="146" x2="314" y2="146"/>
+    <line x1="130" y1="192" x2="314" y2="192"/>
+    <line x1="130" y1="238" x2="314" y2="238"/>
+    <line x1="130" y1="284" x2="314" y2="284"/>
+    <line x1="130" y1="100" x2="130" y2="284"/>
+    <line x1="176" y1="100" x2="176" y2="284"/>
+    <line x1="222" y1="100" x2="222" y2="284"/>
+    <line x1="268" y1="100" x2="268" y2="284"/>
+    <line x1="314" y1="100" x2="314" y2="284"/>
+  </g>
+
+  <!-- R headers -->
+  <g font-size="12" fill="#374151" text-anchor="middle">
+    <text x="153" y="92">상품1</text><text x="199" y="92">상품2</text>
+    <text x="245" y="92">상품3</text><text x="291" y="92">상품4</text>
+  </g>
+  <g font-size="12" fill="#374151" text-anchor="end">
+    <text x="122" y="129">유저 A</text><text x="122" y="175">유저 B</text>
+    <text x="122" y="221">유저 C</text><text x="122" y="267">유저 D</text>
+  </g>
+
+  <!-- R observed marks -->
+  <g font-size="20" font-weight="bold" fill="#16a34a" text-anchor="middle">
+    <text x="153" y="130">✓</text><text x="199" y="130">✓</text>
+    <text x="153" y="176">✓</text><text x="199" y="176">✓</text><text x="291" y="176">✓</text>
+    <text x="245" y="222">✓</text>
+    <text x="153" y="268">✓</text>
+  </g>
+
+  <text x="222" y="308" text-anchor="middle" font-size="13.5" fill="#374151">R — 관측 행렬 (빈칸 = 미관측)</text>
+
+  <!-- ≈ -->
+  <text x="343" y="204" text-anchor="middle" font-size="30" fill="#374151">≈</text>
+
+  <!-- P grid -->
+  <g stroke="#9ca3af" stroke-width="1">
+    <line x1="372" y1="100" x2="464" y2="100"/>
+    <line x1="372" y1="146" x2="464" y2="146"/>
+    <line x1="372" y1="192" x2="464" y2="192"/>
+    <line x1="372" y1="238" x2="464" y2="238"/>
+    <line x1="372" y1="284" x2="464" y2="284"/>
+    <line x1="372" y1="100" x2="372" y2="284"/>
+    <line x1="418" y1="100" x2="418" y2="284"/>
+    <line x1="464" y1="100" x2="464" y2="284"/>
+  </g>
+  <g font-size="12" fill="#6b7280" text-anchor="middle">
+    <text x="395" y="92">f1</text><text x="441" y="92">f2</text>
+  </g>
+  <g font-size="15" fill="#1d4ed8" text-anchor="middle">
+    <text x="395" y="129">0.9</text><text x="441" y="129">0.1</text>
+    <text x="395" y="175">1.0</text><text x="441" y="175">0.1</text>
+    <text x="395" y="221">0.1</text><text x="441" y="221">1.0</text>
+    <text x="395" y="267">0.8</text><text x="441" y="267">0.1</text>
+  </g>
+  <text x="418" y="308" text-anchor="middle" font-size="13.5" fill="#374151">P — 유저 벡터</text>
+
+  <!-- × -->
+  <text x="493" y="204" text-anchor="middle" font-size="26" fill="#374151">×</text>
+
+  <!-- Qᵀ grid -->
+  <g stroke="#9ca3af" stroke-width="1">
+    <line x1="522" y1="100" x2="706" y2="100"/>
+    <line x1="522" y1="146" x2="706" y2="146"/>
+    <line x1="522" y1="192" x2="706" y2="192"/>
+    <line x1="522" y1="100" x2="522" y2="192"/>
+    <line x1="568" y1="100" x2="568" y2="192"/>
+    <line x1="614" y1="100" x2="614" y2="192"/>
+    <line x1="660" y1="100" x2="660" y2="192"/>
+    <line x1="706" y1="100" x2="706" y2="192"/>
+  </g>
+  <g font-size="12" fill="#374151" text-anchor="middle">
+    <text x="545" y="92">상품1</text><text x="591" y="92">상품2</text>
+    <text x="637" y="92">상품3</text><text x="683" y="92">상품4</text>
+  </g>
+  <g font-size="12" fill="#6b7280" text-anchor="end">
+    <text x="514" y="129">f1</text><text x="514" y="175">f2</text>
+  </g>
+  <g font-size="15" fill="#1d4ed8" text-anchor="middle">
+    <text x="545" y="129">1.0</text><text x="591" y="129">0.9</text><text x="637" y="129">0.1</text><text x="683" y="129">0.7</text>
+    <text x="545" y="175">0.1</text><text x="591" y="175">0.1</text><text x="637" y="175">1.0</text><text x="683" y="175">0.1</text>
+  </g>
+  <text x="614" y="216" text-anchor="middle" font-size="13.5" fill="#374151">Q<tspan font-size="10" dy="-5">T</tspan><tspan dy="5"> — 아이템 벡터</tspan></text>
+
+  <!-- annotation right of Q -->
+  <g font-size="13.5" fill="#374151">
+    <text x="742" y="112">빈칸이 뚫린 R 을</text>
+    <text x="742" y="134">구멍 없는 두 행렬로 요약한다.</text>
+    <text x="742" y="176" font-weight="bold" fill="#1d4ed8">k = 2</text>
+    <text x="742" y="198">유저와 아이템이 같은</text>
+    <text x="742" y="220">2차원 공간의 벡터가 된다.</text>
+    <text x="742" y="262" fill="#6b7280">f1 — 상품1·2·4 취향</text>
+    <text x="742" y="284" fill="#6b7280">f2 — 상품3(니치) 취향</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- Row 2: reconstruction                                        -->
+  <!-- ============================================================ -->
+  <text x="222" y="354" text-anchor="middle" font-size="15" font-weight="bold" fill="#111827">P · Q<tspan font-size="11" dy="-5">T</tspan><tspan dy="5"> 를 다시 곱하면</tspan></text>
+
+  <!-- observed-origin cells (green) -->
+  <g fill="#dcfce7">
+    <rect x="130" y="390" width="46" height="46"/>
+    <rect x="176" y="390" width="46" height="46"/>
+    <rect x="130" y="436" width="46" height="46"/>
+    <rect x="176" y="436" width="46" height="46"/>
+    <rect x="268" y="436" width="46" height="46"/>
+    <rect x="222" y="482" width="46" height="46"/>
+    <rect x="130" y="528" width="46" height="46"/>
+  </g>
+  <!-- newly filled cells (amber) -->
+  <g fill="#fef3c7">
+    <rect x="222" y="390" width="46" height="46"/>
+    <rect x="268" y="390" width="46" height="46"/>
+    <rect x="222" y="436" width="46" height="46"/>
+    <rect x="130" y="482" width="46" height="46"/>
+    <rect x="176" y="482" width="46" height="46"/>
+    <rect x="268" y="482" width="46" height="46"/>
+    <rect x="176" y="528" width="46" height="46"/>
+    <rect x="222" y="528" width="46" height="46"/>
+    <rect x="268" y="528" width="46" height="46"/>
+  </g>
+  <!-- the two story cells -->
+  <g fill="none" stroke="#dc2626" stroke-width="2.5">
+    <rect x="268" y="390" width="46" height="46"/>
+    <rect x="176" y="528" width="46" height="46"/>
+  </g>
+
+  <!-- R-hat grid -->
+  <g stroke="#9ca3af" stroke-width="1">
+    <line x1="130" y1="390" x2="314" y2="390"/>
+    <line x1="130" y1="436" x2="314" y2="436"/>
+    <line x1="130" y1="482" x2="314" y2="482"/>
+    <line x1="130" y1="528" x2="314" y2="528"/>
+    <line x1="130" y1="574" x2="314" y2="574"/>
+    <line x1="130" y1="390" x2="130" y2="574"/>
+    <line x1="176" y1="390" x2="176" y2="574"/>
+    <line x1="222" y1="390" x2="222" y2="574"/>
+    <line x1="268" y1="390" x2="268" y2="574"/>
+    <line x1="314" y1="390" x2="314" y2="574"/>
+  </g>
+  <g font-size="12" fill="#374151" text-anchor="middle">
+    <text x="153" y="382">상품1</text><text x="199" y="382">상품2</text>
+    <text x="245" y="382">상품3</text><text x="291" y="382">상품4</text>
+  </g>
+  <g font-size="12" fill="#374151" text-anchor="end">
+    <text x="122" y="419">유저 A</text><text x="122" y="465">유저 B</text>
+    <text x="122" y="511">유저 C</text><text x="122" y="557">유저 D</text>
+  </g>
+
+  <!-- values: green = 관측에서 온 칸, amber = 새로 채워진 칸 -->
+  <g font-size="15" text-anchor="middle">
+    <g fill="#15803d">
+      <text x="153" y="419">0.9</text><text x="199" y="419">0.8</text>
+      <text x="153" y="465">1.0</text><text x="199" y="465">0.9</text><text x="291" y="465">0.7</text>
+      <text x="245" y="511">1.0</text>
+      <text x="153" y="557">0.8</text>
+    </g>
+    <g fill="#b45309">
+      <text x="245" y="419">0.2</text>
+      <text x="291" y="419" font-weight="bold">0.6</text>
+      <text x="245" y="465">0.2</text>
+      <text x="153" y="511">0.2</text><text x="199" y="511">0.2</text><text x="291" y="511">0.2</text>
+      <text x="199" y="557" font-weight="bold">0.7</text>
+      <text x="245" y="557">0.2</text><text x="291" y="557">0.6</text>
+    </g>
+  </g>
+
+  <!-- legend -->
+  <rect x="130" y="590" width="13" height="13" fill="#dcfce7" stroke="#9ca3af"/>
+  <text x="149" y="601" font-size="12" fill="#374151">관측된 칸</text>
+  <rect x="222" y="590" width="13" height="13" fill="#fef3c7" stroke="#9ca3af"/>
+  <text x="241" y="601" font-size="12" fill="#374151">새로 채워진 예측값</text>
+
+  <!-- annotation right of R-hat -->
+  <g font-size="13.5" fill="#374151">
+    <text x="360" y="400" font-weight="bold" fill="#b45309">빈칸이 전부 예측값으로 채워진다.</text>
+    <text x="360" y="428">이웃을 찾지 않고, 학습된 벡터의 내적으로</text>
+    <text x="360" y="450">모든 (유저, 아이템) 쌍에 점수를 매긴다.</text>
+
+    <text x="360" y="492">• 유저 A × 상품4 = 0.9×0.7 + 0.1×0.1 = <tspan font-weight="bold" fill="#b45309">0.6</tspan></text>
+    <text x="376" y="512" fill="#6b7280">u2i 그림에서 ? 였던 칸 — 같은 답에 도달</text>
+
+    <text x="360" y="544">• 유저 D × 상품2 = 0.8×0.9 + 0.1×0.1 = <tspan font-weight="bold" fill="#b45309">0.7</tspan></text>
+    <text x="376" y="564" fill="#6b7280">i2i 그림에서 ? 였던 칸 — 같은 답에 도달</text>
+
+    <text x="360" y="600" fill="#6b7280">상품3은 A·B·D 모두 0.2 — 니치로 학습됨</text>
+  </g>
+</svg>
