@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 570" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="bsarrow" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#6b7280"/>
+    </marker>
+    <marker id="bsarrowlight" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#d1d5db"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1060" height="570" fill="#ffffff"/>
+
+  <text x="530" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#111827">리소스 0개로 판 깔기 — 네 파일과 명령의 관계</text>
+  <text x="530" y="56" text-anchor="middle" font-size="13" fill="#374151">dev/ 안의 .tf 는 이름·순서와 무관하게 하나로 합쳐진다. terraform.tfvars 만 이름이 특별하다(자동 로드)</text>
+
+  <!-- ============ ① 파일 병합 ============ -->
+  <text x="50" y="94" font-size="13.5" font-weight="bold" fill="#374151">① 네 파일이 하나의 설정으로</text>
+
+  <rect x="50" y="106" width="250" height="44" fill="#dbeafe"/>
+  <text x="62" y="126" font-size="12.5" font-weight="bold" fill="#1e3a8a">provider.tf</text>
+  <text x="62" y="142" font-size="11" fill="#374151">누가·어디에 — profile, region, tags</text>
+
+  <rect x="50" y="156" width="250" height="44" fill="#fef3c7"/>
+  <text x="62" y="176" font-size="12.5" font-weight="bold" fill="#92400e">backend.tf</text>
+  <text x="62" y="192" font-size="11" fill="#374151">state 를 어디 보관 — S3 + 락</text>
+
+  <rect x="50" y="206" width="250" height="44" fill="#dcfce7"/>
+  <text x="62" y="226" font-size="12.5" font-weight="bold" fill="#14532d">variables.tf</text>
+  <text x="62" y="242" font-size="11" fill="#374151">빈칸 선언 — type, default</text>
+
+  <rect x="50" y="256" width="250" height="44" fill="#f0fdf4"/>
+  <text x="62" y="276" font-size="12.5" font-weight="bold" fill="#14532d">terraform.tfvars</text>
+  <text x="62" y="292" font-size="11" fill="#374151">빈칸에 채울 값 — env = "dev"</text>
+
+  <line x1="302" y1="128" x2="374" y2="190" stroke="#6b7280" stroke-width="1.2" marker-end="url(#bsarrow)"/>
+  <line x1="302" y1="178" x2="374" y2="198" stroke="#6b7280" stroke-width="1.2" marker-end="url(#bsarrow)"/>
+  <line x1="302" y1="228" x2="374" y2="208" stroke="#6b7280" stroke-width="1.2" marker-end="url(#bsarrow)"/>
+  <line x1="302" y1="278" x2="374" y2="216" stroke="#6b7280" stroke-width="1.2" marker-end="url(#bsarrow)"/>
+
+  <rect x="382" y="140" width="196" height="126" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="480" y="166" text-anchor="middle" font-size="13" font-weight="bold" fill="#111827">dev/ 루트 모듈</text>
+  <text x="396" y="192" font-size="11.5" fill="#374151">· provider aws 2개(기본+alias)</text>
+  <text x="396" y="212" font-size="11.5" fill="#374151">· backend s3 1개</text>
+  <text x="396" y="232" font-size="11.5" fill="#374151">· 변수 11개 (값은 tfvars)</text>
+  <text x="396" y="252" font-size="11.5" font-weight="bold" fill="#b91c1c">· resource 0개</text>
+  <text x="382" y="288" font-size="11" fill="#6b7280">파일 이름은 Terraform 에 의미 없음</text>
+
+  <!-- ============ ② 값 치환 ============ -->
+  <text x="620" y="94" font-size="13.5" font-weight="bold" fill="#374151">② 변수 → 값 치환 (terraform console)</text>
+
+  <rect x="620" y="106" width="410" height="160" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5">
+    <text x="634" y="132" fill="#1e3a8a">var.env</text>
+    <text x="880" y="132" fill="#111827">→ "dev"</text>
+    <text x="634" y="158" fill="#1e3a8a">var.account_id</text>
+    <text x="880" y="158" fill="#111827">→ "123456789012"</text>
+    <text x="634" y="184" fill="#1e3a8a">"${var.env}-internal-ingress"</text>
+    <text x="634" y="202" fill="#111827">    → "dev-internal-ingress"</text>
+    <text x="634" y="228" fill="#1e3a8a">var.sub_pubs[0]</text>
+    <text x="634" y="246" fill="#111827">    → "subnet-0123456789abcdef1"</text>
+  </g>
+  <text x="620" y="288" font-size="11" fill="#6b7280">우선순위: default &lt; TF_VAR_ &lt; terraform.tfvars &lt; *.auto.tfvars &lt; -var</text>
+
+  <!-- ============ ③ 명령 파이프라인 ============ -->
+  <text x="50" y="346" font-size="13.5" font-weight="bold" fill="#374151">③ 명령마다 필요한 것 — 이 프로젝트는 validate 까지</text>
+
+  <!-- init -->
+  <rect x="50" y="360" width="230" height="160" fill="#eff6ff"/>
+  <rect x="50" y="360" width="230" height="30" fill="#1e3a8a"/>
+  <text x="165" y="381" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">terraform init</text>
+  <text x="62" y="414" font-size="11.5" fill="#374151">필요: provider.tf, backend.tf</text>
+  <text x="62" y="436" font-size="11.5" fill="#374151">결과: 플러그인 다운로드</text>
+  <text x="62" y="458" font-size="11.5" fill="#374151">　　　.terraform.lock.hcl 기록</text>
+  <text x="62" y="480" font-size="11.5" fill="#374151">　　　backend(state) 연결</text>
+  <text x="62" y="506" font-size="11.5" font-weight="bold" fill="#1e3a8a">우리: -backend=false</text>
+
+  <line x1="282" y1="440" x2="298" y2="440" stroke="#6b7280" stroke-width="1.2" marker-end="url(#bsarrow)"/>
+
+  <!-- validate -->
+  <rect x="300" y="360" width="230" height="160" fill="#f0fdf4"/>
+  <rect x="300" y="360" width="230" height="30" fill="#14532d"/>
+  <text x="415" y="381" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">terraform validate</text>
+  <text x="312" y="414" font-size="11.5" fill="#374151">필요: 모든 .tf</text>
+  <text x="312" y="436" font-size="11.5" fill="#374151">　　　(변수 값 불필요)</text>
+  <text x="312" y="458" font-size="11.5" fill="#374151">결과: 문법·참조 검사</text>
+  <text x="312" y="480" font-size="11.5" fill="#374151">　　　backend 는 안 봄</text>
+  <text x="312" y="506" font-size="11.5" font-weight="bold" fill="#14532d">우리: ✓ 성공 기준</text>
+
+  <line x1="532" y1="440" x2="548" y2="440" stroke="#d1d5db" stroke-width="1.2" marker-end="url(#bsarrowlight)"/>
+
+  <!-- plan -->
+  <rect x="550" y="360" width="230" height="160" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 3"/>
+  <rect x="550" y="360" width="230" height="30" fill="#9ca3af"/>
+  <text x="665" y="381" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">terraform plan</text>
+  <text x="562" y="414" font-size="11.5" fill="#9ca3af">필요: 변수 값 + state</text>
+  <text x="562" y="436" font-size="11.5" fill="#9ca3af">　　　+ AWS 자격증명</text>
+  <text x="562" y="458" font-size="11.5" fill="#9ca3af">결과: 코드 vs state vs 실제</text>
+  <text x="562" y="480" font-size="11.5" fill="#9ca3af">　　　차이(diff) 출력</text>
+  <text x="562" y="506" font-size="11.5" font-weight="bold" fill="#9ca3af">우리: 돌리지 않음</text>
+
+  <line x1="782" y1="440" x2="798" y2="440" stroke="#d1d5db" stroke-width="1.2" marker-end="url(#bsarrowlight)"/>
+
+  <!-- apply -->
+  <rect x="800" y="360" width="230" height="160" fill="#f9fafb" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 3"/>
+  <rect x="800" y="360" width="230" height="30" fill="#9ca3af"/>
+  <text x="915" y="381" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">terraform apply</text>
+  <text x="812" y="414" font-size="11.5" fill="#9ca3af">필요: 락 + 자격증명</text>
+  <text x="812" y="436" font-size="11.5" fill="#9ca3af">결과: AWS API 호출</text>
+  <text x="812" y="458" font-size="11.5" fill="#9ca3af">　　　state 갱신</text>
+  <text x="812" y="480" font-size="11.5" fill="#9ca3af">　　　락 해제</text>
+  <text x="812" y="506" font-size="11.5" font-weight="bold" fill="#9ca3af">우리: 돌리지 않음</text>
+
+  <text x="50" y="548" font-size="11.5" fill="#6b7280">plan·apply 는 실제 AWS 자원과 자격증명을 요구한다. 학습 repo 는 validate 통과를 각 단계의 성공 기준으로 삼는다.</text>
+</svg>
