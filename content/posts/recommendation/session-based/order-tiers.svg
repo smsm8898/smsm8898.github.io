@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 560" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="sarrow" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#6b7280"/>
+    </marker>
+    <marker id="sarrowsm" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1040" height="560" fill="#ffffff"/>
+
+  <text x="520" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#111827">같은 세션, 순서 정보를 얼마나 쓰느냐에 따라 갈리는 예측</text>
+
+  <!-- ===== session strip ===== -->
+  <text x="60" y="66" font-size="12.5" font-weight="bold" fill="#374151">현재 세션 — 익명 방문자, 유저 id 없음</text>
+
+  <rect x="60" y="76" width="146" height="42" rx="4" fill="#f3f4f6" stroke="#d1d5db"/>
+  <text x="133" y="102" text-anchor="middle" font-size="12.5" fill="#374151">상품3 요가 매트</text>
+  <line x1="212" y1="97" x2="238" y2="97" stroke="#6b7280" stroke-width="1.8" marker-end="url(#sarrow)"/>
+
+  <rect x="244" y="76" width="168" height="42" rx="4" fill="#f3f4f6" stroke="#d1d5db"/>
+  <text x="328" y="102" text-anchor="middle" font-size="12.5" fill="#374151">상품1 에스프레소 머신</text>
+  <line x1="418" y1="97" x2="444" y2="97" stroke="#6b7280" stroke-width="1.8" marker-end="url(#sarrow)"/>
+
+  <rect x="450" y="76" width="150" height="42" rx="4" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="525" y="94" text-anchor="middle" font-size="12.5" fill="#1e3a8a">상품4 드립 케틀</text>
+  <text x="525" y="110" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#2563eb">지금 보고 있음</text>
+
+  <text x="620" y="94" font-size="13" font-weight="bold" fill="#111827">다음에 무엇을 볼까?</text>
+  <text x="620" y="112" font-size="11.5" fill="#6b7280">요가 매트는 세션 초반의 이탈 클릭이었다</text>
+
+  <line x1="60" y1="140" x2="1000" y2="140" stroke="#e5e7eb" stroke-width="1.5"/>
+
+  <!-- ===== column headers ===== -->
+  <g font-size="11.5" font-weight="bold" fill="#6b7280">
+    <text x="60" y="164">순서를 쓰는 정도</text>
+    <text x="330" y="164">무엇을 보나</text>
+    <text x="660" y="164">예측과 문제</text>
+  </g>
+
+  <!-- =================== TIER 1 =================== -->
+  <text x="60" y="200" font-size="14" font-weight="bold" fill="#1d4ed8">① 순서를 버린다</text>
+  <text x="60" y="220" font-size="11.5" fill="#6b7280">세션을 집합으로 취급</text>
+  <text x="60" y="238" font-size="11.5" fill="#6b7280">공출현만 사용</text>
+  <text x="60" y="258" font-size="11" fill="#9ca3af">S-kNN, 연관 규칙</text>
+
+  <text x="318" y="212" font-size="26" fill="#9ca3af">{</text>
+  <rect x="336" y="190" width="86" height="30" rx="3" fill="#f3f4f6" stroke="#d1d5db"/>
+  <text x="379" y="210" text-anchor="middle" font-size="11" fill="#374151">요가매트</text>
+  <rect x="430" y="190" width="94" height="30" rx="3" fill="#f3f4f6" stroke="#d1d5db"/>
+  <text x="477" y="210" text-anchor="middle" font-size="11" fill="#374151">에스프레소</text>
+  <rect x="532" y="190" width="86" height="30" rx="3" fill="#f3f4f6" stroke="#d1d5db"/>
+  <text x="575" y="210" text-anchor="middle" font-size="11" fill="#374151">드립케틀</text>
+  <text x="622" y="212" font-size="26" fill="#9ca3af">}</text>
+  <text x="336" y="240" font-size="11" fill="#6b7280">셋을 동등하게 — 순서도 최근성도 없다</text>
+
+  <rect x="660" y="188" width="180" height="34" rx="4" fill="#fee2e2" stroke="#fca5a5"/>
+  <text x="750" y="210" text-anchor="middle" font-size="12" fill="#991b1b">상품6 요가 블록</text>
+  <text x="856" y="210" font-size="12" fill="#991b1b">← 빗나감</text>
+  <text x="660" y="244" font-size="11.5" fill="#374151">초반 이탈 클릭이 최근 맥락과 같은 무게를</text>
+  <text x="660" y="260" font-size="11.5" fill="#374151">가져서 엉뚱한 방향으로 끌린다</text>
+
+  <line x1="60" y1="284" x2="1000" y2="284" stroke="#f3f4f6" stroke-width="1"/>
+
+  <!-- =================== TIER 2 =================== -->
+  <text x="60" y="320" font-size="14" font-weight="bold" fill="#1d4ed8">② 직전만 본다</text>
+  <text x="60" y="340" font-size="11.5" fill="#6b7280">1차 전이 확률</text>
+  <text x="60" y="358" font-size="11.5" fill="#6b7280">직전 아이템 하나에만 의존</text>
+  <text x="60" y="378" font-size="11" fill="#9ca3af">마르코프 체인, FPMC</text>
+
+  <rect x="336" y="310" width="86" height="30" rx="3" fill="#fafafa" stroke="#f3f4f6"/>
+  <text x="379" y="330" text-anchor="middle" font-size="11" fill="#e5e7eb">요가매트</text>
+  <rect x="430" y="310" width="94" height="30" rx="3" fill="#fafafa" stroke="#f3f4f6"/>
+  <text x="477" y="330" text-anchor="middle" font-size="11" fill="#e5e7eb">에스프레소</text>
+  <rect x="532" y="310" width="86" height="30" rx="3" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="575" y="330" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e3a8a">드립케틀</text>
+  <text x="336" y="360" font-size="11" fill="#6b7280">앞의 둘은 아예 보지 않는다</text>
+
+  <rect x="660" y="308" width="200" height="34" rx="4" fill="#dcfce7" stroke="#86efac"/>
+  <text x="760" y="330" text-anchor="middle" font-size="12" fill="#14532d">상품2 커피 그라인더</text>
+  <text x="876" y="330" font-size="12" fill="#15803d">← 맞음</text>
+  <text x="660" y="364" font-size="11.5" fill="#374151">이번엔 맞았지만, 직전 클릭이 우연이었다면</text>
+  <text x="660" y="380" font-size="11.5" fill="#374151">세션 맥락을 통째로 잃는다</text>
+
+  <line x1="60" y1="404" x2="1000" y2="404" stroke="#f3f4f6" stroke-width="1"/>
+
+  <!-- =================== TIER 3 =================== -->
+  <text x="60" y="440" font-size="14" font-weight="bold" fill="#1d4ed8">③ 시퀀스 전체를 본다</text>
+  <text x="60" y="460" font-size="11.5" fill="#6b7280">장기 의존성 + 최근성</text>
+  <text x="60" y="478" font-size="11.5" fill="#6b7280">순서를 학습한다</text>
+  <text x="60" y="498" font-size="11" fill="#9ca3af">GRU4Rec, SASRec, BERT4Rec</text>
+
+  <rect x="336" y="430" width="86" height="30" rx="3" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="379" y="450" text-anchor="middle" font-size="11" fill="#9ca3af">요가매트</text>
+  <line x1="426" y1="445" x2="446" y2="445" stroke="#9ca3af" stroke-width="1.4" marker-end="url(#sarrowsm)"/>
+  <rect x="452" y="430" width="94" height="30" rx="3" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="499" y="450" text-anchor="middle" font-size="11" fill="#374151">에스프레소</text>
+  <line x1="550" y1="445" x2="570" y2="445" stroke="#9ca3af" stroke-width="1.4" marker-end="url(#sarrowsm)"/>
+  <rect x="576" y="430" width="86" height="30" rx="3" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="619" y="450" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e3a8a">드립케틀</text>
+  <text x="336" y="480" font-size="11" fill="#6b7280">전부 보되 최근에 더 무게를 준다 (색이 진해지는 방향)</text>
+
+  <rect x="700" y="428" width="200" height="34" rx="4" fill="#dcfce7" stroke="#22c55e" stroke-width="1.8"/>
+  <text x="800" y="450" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">상품2 커피 그라인더</text>
+  <text x="916" y="450" font-size="12" font-weight="bold" fill="#15803d">← 맞음</text>
+  <rect x="700" y="466" width="200" height="26" rx="4" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <text x="800" y="484" text-anchor="middle" font-size="11" fill="#15803d">상품5 콜드브루 메이커</text>
+  <text x="700" y="514" font-size="11.5" fill="#374151">노이즈는 눌리고 최근 맥락이 살아난다.</text>
+  <text x="700" y="530" font-size="11.5" fill="#374151">대신 학습 비용과 튜닝 부담이 붙는다</text>
+</svg>
