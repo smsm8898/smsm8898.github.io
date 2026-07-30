@@ -98,7 +98,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket       = "dev-infra-example-ap-northeast-2"
-    key          = "tfstate/infra/terraform.tfstate"
+    key          = "tfstate/example-infra/terraform.tfstate"
     region       = "ap-northeast-2"
     profile      = "dev-infra"
     use_lockfile = true
