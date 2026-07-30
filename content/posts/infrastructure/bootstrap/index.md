@@ -191,7 +191,7 @@ account_id = "123456789012"
   name = "${var.env}-internal-ingress"   # dev → dev-internal-ingress, prod → prod-internal-ingress
   ```
 
-- `.tfvars`를 커밋해도 되나: 비밀키가 아니라 **식별자**만 들어있고(여기서는 전부 더미), CI가 읽어야 하므로 커밋함. 대신 실값이 새지 않는지 커밋마다 grep 게이트로 검사
+- `.tfvars`를 커밋해도 되나: 비밀키가 아니라 **식별자**만 들어있고, CI가 읽어야 하므로 커밋함. DB 비밀번호 같은 진짜 비밀값은 tfvars에 두지 않고 Secrets Manager나 `TF_VAR_` 환경변수로 넘긴다
 
 ## 3. 대안
 
@@ -253,12 +253,13 @@ account_id = "123456789012"
 |---|---|---|---|
 |`fmt`|✗|✗|✗|
 |`validate`|✗|✗|✗|
+|`providers`|✗|✓|✗|
 |`console`|평가하는 식에 필요하면|✓|`data` 평가 시|
 |`plan`|✓|✓|✓|
 |`apply`|✓|✓|✓|
 
-**2. `console`이 backend를 요구한 이유**
-- 학습 repo는 S3 버킷이 실제로 없으므로 `init -backend=false`로 초기화한다. 이 상태에서 `console`을 실행하면
+**2. `console`·`providers`가 backend를 요구한 이유**
+- 이 시리즈는 state 버킷을 실제로 만들지 않으므로 `init -backend=false`로 초기화한다. 이 상태에서 `console`을 실행하면
 
   ```text
   Error: Backend initialization required, please run "terraform init"
@@ -266,6 +267,7 @@ account_id = "123456789012"
   ```
 
 - `console`은 state를 읽는 명령이라 backend 연결을 요구하기 때문. 변수 값만 굴려보고 싶으면 **`backend.tf`를 뺀 복사본**에서 하면 된다 (참고 7번)
+- **`terraform providers`도 같은 에러를 낸다.** 이름만 보면 "코드가 요구하는 provider 목록"이라 정적 검사처럼 보이지만, state에 기록된 provider까지 함께 출력하는 명령이라 backend 연결이 필요하다
 
 **3. `default_tags`는 리소스 태그와 어떻게 합쳐지나?**
 - 리소스에 고유 태그만 써도 provider의 `default_tags`가 합쳐져 들어간다
@@ -310,7 +312,6 @@ account_id = "123456789012"
 terraform -chdir=dev init -backend=false
 terraform -chdir=dev validate
 terraform -chdir=dev fmt -check
-terraform -chdir=dev providers        # 필요한 provider 트리 출력
 
 # 변수 값을 굴려보려면 backend 없는 복사본에서
 mkdir -p /tmp/tfdemo && cp dev/*.tf dev/terraform.tfvars /tmp/tfdemo/

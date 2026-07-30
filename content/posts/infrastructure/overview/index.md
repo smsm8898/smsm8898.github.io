@@ -7,9 +7,9 @@ summary: "Terraform으로 AWS 인프라를 한 조각씩 쌓아가며 정리하�
 series: [AWS Infrastructure as Code]
 ---
 
-이 글은 **AWS Infrastructure as Code** 시리즈의 출발점입니다. 실제로 운영되는 Terraform
-코드를 도메인 단위로 쪼개 다시 쌓아보면서, 각 AWS 리소스가 왜 그렇게 설정되어 있는지를
-한 편씩 정리합니다.
+이 글은 **AWS Infrastructure as Code** 시리즈의 출발점입니다. EKS 기반 인프라를 도메인
+단위로 한 조각씩 쌓아보면서, 각 AWS 리소스가 왜 그렇게 설정되어 있는지를 한 편씩
+정리합니다.
 
 ## 1. 왜 필요한가?
 - **배경(콘솔 클릭의 한계)**: AWS 콘솔에서 클릭으로 만든 인프라는 "지금 어떻게 생겼는지"를 아무도 정확히 모름. 누가 언제 왜 바꿨는지 이력이 없고, 같은 구성을 dev/prod에 재현할 방법이 없음
@@ -19,7 +19,7 @@ series: [AWS Infrastructure as Code]
 ## 2. 무엇을 다루는가?
 - **도구의 뼈대**: provider(누가 어디에), state(무엇을 만들었는지 기록), 변수(환경별로 달라지는 값)
 - **AWS 리소스**: 네트워크(VPC·Subnet·SG) → 컴퓨트(EKS·Node Group·EC2) → 권한(IAM·Pod Identity) → 스토리지·레지스트리(S3·ECR) → DNS(Route53)
-- **학습 방식**: 실제 `apply`는 하지 않고 **`terraform validate` 통과를 각 단계의 성공 기준**으로 삼음. 계정·리소스 ID·도메인은 전부 더미로 치환하고, 실값이 새지 않는지 커밋마다 grep 게이트로 검사
+- **학습 방식**: 실제 `apply`는 하지 않고 **`terraform validate` 통과를 각 단계의 성공 기준**으로 삼음. 계정 번호·리소스 ID·도메인은 예시 값을 쓴다
 
 ## 3. 구성 요소
 
