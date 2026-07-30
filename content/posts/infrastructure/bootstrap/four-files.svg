@@ -61,7 +61,7 @@
   <text x="620" y="288" font-size="11" fill="#6b7280">우선순위: default &lt; TF_VAR_ &lt; terraform.tfvars &lt; *.auto.tfvars &lt; -var</text>
 
   <!-- ============ ③ 명령 파이프라인 ============ -->
-  <text x="50" y="346" font-size="13.5" font-weight="bold" fill="#374151">③ 명령마다 필요한 것 — 이 프로젝트는 validate 까지</text>
+  <text x="50" y="346" font-size="13.5" font-weight="bold" fill="#374151">③ 명령마다 필요한 것</text>
 
   <!-- init -->
   <rect x="50" y="360" width="230" height="160" fill="#eff6ff"/>
@@ -71,7 +71,7 @@
   <text x="62" y="436" font-size="11.5" fill="#374151">결과: 플러그인 다운로드</text>
   <text x="62" y="458" font-size="11.5" fill="#374151">　　　.terraform.lock.hcl 기록</text>
   <text x="62" y="480" font-size="11.5" fill="#374151">　　　backend(state) 연결</text>
-  <text x="62" y="506" font-size="11.5" font-weight="bold" fill="#1e3a8a">우리: -backend=false</text>
+  <text x="62" y="506" font-size="11.5" font-weight="bold" fill="#1e3a8a">옵션: -backend=false</text>
 
   <line x1="282" y1="440" x2="298" y2="440" stroke="#6b7280" stroke-width="1.2" marker-end="url(#bsarrow)"/>
 
@@ -83,7 +83,7 @@
   <text x="312" y="436" font-size="11.5" fill="#374151">　　　(변수 값 불필요)</text>
   <text x="312" y="458" font-size="11.5" fill="#374151">결과: 문법·참조 검사</text>
   <text x="312" y="480" font-size="11.5" fill="#374151">　　　backend 는 안 봄</text>
-  <text x="312" y="506" font-size="11.5" font-weight="bold" fill="#14532d">우리: ✓ 성공 기준</text>
+  <text x="312" y="506" font-size="11.5" font-weight="bold" fill="#14532d">AWS 접속 불필요</text>
 
   <line x1="532" y1="440" x2="548" y2="440" stroke="#d1d5db" stroke-width="1.2" marker-end="url(#bsarrowlight)"/>
 
@@ -95,7 +95,7 @@
   <text x="562" y="436" font-size="11.5" fill="#9ca3af">　　　+ AWS 자격증명</text>
   <text x="562" y="458" font-size="11.5" fill="#9ca3af">결과: 코드 vs state vs 실제</text>
   <text x="562" y="480" font-size="11.5" fill="#9ca3af">　　　차이(diff) 출력</text>
-  <text x="562" y="506" font-size="11.5" font-weight="bold" fill="#9ca3af">우리: 돌리지 않음</text>
+  <text x="562" y="506" font-size="11.5" font-weight="bold" fill="#9ca3af">적용 전 반드시 읽는다</text>
 
   <line x1="782" y1="440" x2="798" y2="440" stroke="#d1d5db" stroke-width="1.2" marker-end="url(#bsarrowlight)"/>
 
@@ -107,7 +107,7 @@
   <text x="812" y="436" font-size="11.5" fill="#9ca3af">결과: AWS API 호출</text>
   <text x="812" y="458" font-size="11.5" fill="#9ca3af">　　　state 갱신</text>
   <text x="812" y="480" font-size="11.5" fill="#9ca3af">　　　락 해제</text>
-  <text x="812" y="506" font-size="11.5" font-weight="bold" fill="#9ca3af">우리: 돌리지 않음</text>
+  <text x="812" y="506" font-size="11.5" font-weight="bold" fill="#9ca3af">되돌릴 수 없다</text>
 
-  <text x="50" y="548" font-size="11.5" fill="#6b7280">plan·apply 는 실제 AWS 자원과 자격증명을 요구한다. 학습 repo 는 validate 통과를 각 단계의 성공 기준으로 삼는다.</text>
+  <text x="50" y="548" font-size="11.5" fill="#6b7280">fmt·validate 는 로컬 검사만으로 끝난다. plan·apply 는 실제 AWS 자원과 자격증명을 요구한다.</text>
 </svg>

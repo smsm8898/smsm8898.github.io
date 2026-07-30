@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 520" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="tfarrow" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#6b7280"/>
+    </marker>
+    <marker id="tfarrowstart" markerWidth="8" markerHeight="8" refX="1.5" refY="4" orient="auto">
+      <path d="M8,0 L0,4 L8,8 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1060" height="520" fill="#ffffff"/>
+
+  <text x="530" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#111827">Terraform 이 동작하는 방식 — 상태 선언과 세 곳의 비교</text>
+  <text x="530" y="56" text-anchor="middle" font-size="13" fill="#374151">"이렇게 만들어라"가 아니라 "이런 상태여야 한다"를 적는다. 차이를 계산하는 일은 Terraform 이 한다</text>
+
+  <!-- ============ ① 삼각형 ============ -->
+  <text x="50" y="94" font-size="13.5" font-weight="bold" fill="#374151">① plan 은 세 곳을 비교한다</text>
+
+  <rect x="150" y="110" width="260" height="62" fill="#dbeafe"/>
+  <text x="164" y="133" font-size="12.5" font-weight="bold" fill="#1e3a8a">① 코드 (.tf 파일)</text>
+  <text x="164" y="153" font-size="11" fill="#374151">내가 원하는 상태를 선언 — 사람이 쓴다</text>
+
+  <rect x="40" y="300" width="222" height="76" fill="#fef3c7"/>
+  <text x="54" y="323" font-size="12.5" font-weight="bold" fill="#92400e">② state</text>
+  <text x="54" y="343" font-size="11" fill="#374151">코드상의 이름 ↔ 실제 리소스 ID</text>
+  <text x="54" y="361" font-size="11" fill="#374151">= 내가 만든 것의 장부</text>
+
+  <rect x="318" y="300" width="222" height="76" fill="#dcfce7"/>
+  <text x="332" y="323" font-size="12.5" font-weight="bold" fill="#14532d">③ 실제 AWS</text>
+  <text x="332" y="343" font-size="11" fill="#374151">지금 계정에 진짜로 있는 것</text>
+  <text x="332" y="361" font-size="11" fill="#374151">콘솔에서 보이는 그것</text>
+
+  <line x1="210" y1="174" x2="150" y2="296" stroke="#6b7280" stroke-width="1.2" marker-end="url(#tfarrow)"/>
+  <line x1="350" y1="174" x2="410" y2="296" stroke="#6b7280" stroke-width="1.2" marker-end="url(#tfarrow)"/>
+  <line x1="266" y1="330" x2="314" y2="330" stroke="#6b7280" stroke-width="1.2" marker-start="url(#tfarrowstart)" marker-end="url(#tfarrow)"/>
+  <text x="290" y="355" text-anchor="middle" font-size="10.5" fill="#6b7280">refresh</text>
+
+  <text x="290" y="228" text-anchor="middle" font-size="14" font-weight="bold" fill="#b91c1c">terraform plan</text>
+  <text x="290" y="250" text-anchor="middle" font-size="11.5" fill="#374151">세 곳의 차이를 계산해서 보여준다</text>
+  <text x="290" y="272" text-anchor="middle" font-size="11.5" fill="#6b7280">apply = 그 차이만큼 API 호출</text>
+
+  <text x="50" y="410" font-size="11" fill="#6b7280">두 번 apply 해도 리소스가 둘 생기지 않는 이유 → 첫 apply 가 state 에 "이 이름 = 이 리소스"를 적어두기 때문</text>
+  <text x="50" y="430" font-size="11" fill="#b91c1c">state 를 잃으면 자기가 만든 것을 모른다 → 이미 있는 것을 또 만들거나, 관리 밖으로 벗어난다</text>
+
+  <!-- ============ ② HCL 블록 해부 ============ -->
+  <text x="580" y="94" font-size="13.5" font-weight="bold" fill="#374151">② HCL 블록 해부</text>
+
+  <rect x="580" y="110" width="430" height="122" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5">
+    <text x="596" y="140"><tspan fill="#1e3a8a" font-weight="bold">resource</tspan><tspan fill="#111827"> </tspan><tspan fill="#b45309" font-weight="bold">"aws_vpc"</tspan><tspan fill="#111827"> </tspan><tspan fill="#15803d" font-weight="bold">"main"</tspan><tspan fill="#111827"> {</tspan></text>
+    <text x="596" y="164" fill="#374151" xml:space="preserve">  cidr_block           = "10.0.0.0/16"</text>
+    <text x="596" y="188" fill="#374151" xml:space="preserve">  enable_dns_hostnames = true</text>
+    <text x="596" y="212" fill="#111827">}</text>
+  </g>
+
+  <rect x="580" y="248" width="11" height="11" fill="#1e3a8a"/>
+  <text x="600" y="258" font-size="11.5" fill="#374151"><tspan font-weight="bold">블록 종류</tspan> — resource · data · variable · provider · terraform</text>
+
+  <rect x="580" y="272" width="11" height="11" fill="#b45309"/>
+  <text x="600" y="282" font-size="11.5" fill="#374151"><tspan font-weight="bold">리소스 타입</tspan> — provider 가 아는 이름. 내가 지어낼 수 없다</text>
+
+  <rect x="580" y="296" width="11" height="11" fill="#15803d"/>
+  <text x="600" y="306" font-size="11.5" fill="#374151"><tspan font-weight="bold">내가 붙인 별명</tspan> — 코드에서만 쓰인다. AWS 에는 올라가지 않는다</text>
+
+  <rect x="580" y="320" width="11" height="11" fill="#9ca3af"/>
+  <text x="600" y="330" font-size="11.5" fill="#374151"><tspan font-weight="bold">인자</tspan> — 그 리소스가 받는 설정값</text>
+
+  <text x="580" y="374" font-size="12.5" font-weight="bold" fill="#374151">참조 — 이 문법이 생성 순서를 만든다</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5">
+    <text x="580" y="400" fill="#1e3a8a">var.env</text>
+    <text x="580" y="424" fill="#1e3a8a">aws_vpc.main.id</text>
+    <text x="580" y="448" fill="#1e3a8a">"${var.env}-cluster"</text>
+  </g>
+  <text x="790" y="400" font-size="11" fill="#374151">변수 값을 가져온다</text>
+  <text x="790" y="424" font-size="11" fill="#374151">다른 리소스의 속성 → 의존 관계가 생긴다</text>
+  <text x="790" y="448" font-size="11" fill="#374151">문자열 보간 → "dev-cluster"</text>
+
+  <text x="580" y="478" font-size="11" fill="#6b7280">참조를 쓰면 "VPC 를 먼저, 서브넷을 나중에"를 Terraform 이 스스로 계산한다. 순서를 사람이 적지 않는다</text>
+
+  <text x="50" y="502" font-size="11.5" fill="#6b7280">디렉토리 안의 .tf 는 이름·순서와 무관하게 하나의 설정으로 합쳐진다. 파일을 나누는 것은 사람이 읽기 위한 관례다</text>
+</svg>

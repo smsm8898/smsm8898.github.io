@@ -48,6 +48,9 @@ series: [AWS Infrastructure as Code]
 
 ## 4. 구체적 사례
 
+HCL 문법과 state 개념이 처음이라면 [Terraform · HCL · State](../basic/)를 먼저 읽는 것이 좋다.
+도구가 어떻게 동작하는지 알고 나면 아래 각 편의 코드가 훨씬 빨리 읽힌다.
+
 의존성 순서대로 쌓는다. 앞 편이 만든 것을 뒤 편이 참조하는 구조라, 순서를 바꾸면
 참조할 리소스가 없어 `validate`부터 실패한다.
 
