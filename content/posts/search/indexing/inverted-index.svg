@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 480" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="980" height="480" fill="#ffffff"/>
+
+  <!-- ===================== Left panel: analyzer ===================== -->
+  <text x="40" y="40" font-size="17" font-weight="bold" fill="#111827">① analyzer — 원문을 term으로 자른다</text>
+
+  <!-- stage 1: 원문 -->
+  <text x="40" y="72" font-size="11.5" fill="#6b7280">원문</text>
+  <rect x="40" y="80" width="420" height="36" rx="5" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="56" y="103" font-size="14" fill="#374151">&lt;b&gt;서울에서&lt;/b&gt; 맛집 찾기</text>
+
+  <line x1="245" y1="118" x2="245" y2="140" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- stage 2: char filter -->
+  <text x="40" y="160" font-size="11.5" fill="#6b7280">character filter — HTML 태그 제거</text>
+  <rect x="40" y="168" width="420" height="36" rx="5" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <text x="56" y="191" font-size="14" fill="#374151">서울에서 맛집 찾기</text>
+
+  <line x1="245" y1="206" x2="245" y2="228" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- stage 3: tokenizer -->
+  <text x="40" y="248" font-size="11.5" fill="#6b7280">tokenizer — nori 형태소 분석</text>
+  <g>
+    <rect x="40"  y="256" width="54" height="32" rx="5" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+    <text x="67"  y="278" text-anchor="middle" font-size="14" fill="#374151">서울</text>
+    <rect x="104" y="256" width="54" height="32" rx="5" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+    <text x="131" y="278" text-anchor="middle" font-size="14" fill="#92400e">에서</text>
+    <rect x="168" y="256" width="54" height="32" rx="5" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+    <text x="195" y="278" text-anchor="middle" font-size="14" fill="#374151">맛집</text>
+    <rect x="232" y="256" width="54" height="32" rx="5" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+    <text x="259" y="278" text-anchor="middle" font-size="14" fill="#374151">찾기</text>
+  </g>
+  <text x="300" y="278" font-size="11.5" fill="#d97706">조사(J)로 태깅됨</text>
+
+  <line x1="245" y1="290" x2="245" y2="312" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- stage 4: token filter -->
+  <text x="40" y="332" font-size="11.5" fill="#6b7280">token filter — nori_part_of_speech 로 조사 제거</text>
+  <g>
+    <rect x="40"  y="340" width="54" height="32" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="67"  y="362" text-anchor="middle" font-size="14" font-weight="bold" fill="#1d4ed8">서울</text>
+    <rect x="104" y="340" width="54" height="32" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="131" y="362" text-anchor="middle" font-size="14" font-weight="bold" fill="#1d4ed8">맛집</text>
+    <rect x="168" y="340" width="54" height="32" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="195" y="362" text-anchor="middle" font-size="14" font-weight="bold" fill="#1d4ed8">찾기</text>
+  </g>
+  <text x="240" y="362" font-size="11.5" fill="#1d4ed8">← 이것이 색인되는 term</text>
+
+  <!-- panel divider -->
+  <line x1="492" y1="24" x2="492" y2="410" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- ===================== Right panel: inverted index ===================== -->
+  <text x="520" y="40" font-size="17" font-weight="bold" fill="#111827">② 역색인 — term 기준으로 뒤집는다</text>
+
+  <text x="520" y="72" font-size="11.5" fill="#6b7280">문서 (analyzer 통과 후)</text>
+  <g>
+    <rect x="520" y="80" width="420" height="30" rx="5" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+    <text x="536" y="100" font-size="13" font-weight="bold" fill="#6b7280">1</text>
+    <text x="566" y="100" font-size="13.5" fill="#374151">서울 · 맛집 · 찾기</text>
+
+    <rect x="520" y="114" width="420" height="30" rx="5" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+    <text x="536" y="134" font-size="13" font-weight="bold" fill="#6b7280">2</text>
+    <text x="566" y="134" font-size="13.5" fill="#374151">서울 · 카페 · 추천</text>
+
+    <rect x="520" y="148" width="420" height="30" rx="5" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+    <text x="536" y="168" font-size="13" font-weight="bold" fill="#6b7280">3</text>
+    <text x="566" y="168" font-size="13.5" fill="#374151">부산 · 맛집</text>
+  </g>
+
+  <line x1="730" y1="182" x2="730" y2="206" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="744" y="199" font-size="11.5" fill="#2563eb">행과 열을 뒤집는다</text>
+
+  <!-- posting list table -->
+  <rect x="520" y="216" width="420" height="26" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1"/>
+  <text x="540" y="234" font-size="12" font-weight="bold" fill="#374151">term</text>
+  <text x="680" y="234" font-size="12" font-weight="bold" fill="#374151">posting list</text>
+
+  <rect x="520" y="242" width="420" height="28" fill="#dbeafe" stroke="#9ca3af" stroke-width="1"/>
+  <text x="540" y="261" font-size="13.5" font-weight="bold" fill="#1d4ed8">서울</text>
+  <text x="680" y="261" font-size="13.5" font-weight="bold" fill="#1d4ed8">1, 2</text>
+
+  <g stroke="#9ca3af" stroke-width="1" fill="#ffffff">
+    <rect x="520" y="270" width="420" height="28"/>
+    <rect x="520" y="298" width="420" height="28"/>
+    <rect x="520" y="326" width="420" height="28"/>
+    <rect x="520" y="354" width="420" height="28"/>
+    <rect x="520" y="382" width="420" height="28"/>
+  </g>
+  <g font-size="13.5" fill="#374151">
+    <text x="540" y="289">맛집</text><text x="680" y="289">1, 3</text>
+    <text x="540" y="317">찾기</text><text x="680" y="317">1</text>
+    <text x="540" y="345">카페</text><text x="680" y="345">2</text>
+    <text x="540" y="373">추천</text><text x="680" y="373">2</text>
+    <text x="540" y="401">부산</text><text x="680" y="401">3</text>
+  </g>
+
+  <!-- ===================== footnotes ===================== -->
+  <text x="40" y="440" font-size="12" fill="#6b7280">* 질의어 "서울" 하나로 posting list를 한 번 조회하면 [1, 2]에 즉시 도달한다 — 문서를 훑지 않는다. 이것이 뒤집는 이유다</text>
+  <text x="40" y="460" font-size="12" fill="#6b7280">* 실제 posting list에는 doc ID뿐 아니라 term frequency와 position도 함께 담긴다 — BM25 점수와 구문 검색이 여기서 나온다</text>
+</svg>
