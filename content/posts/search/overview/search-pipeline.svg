@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 660" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="980" height="660" fill="#ffffff"/>
+
+  <!-- ===================== Column headers ===================== -->
+  <text x="240" y="34" text-anchor="middle" font-size="18" font-weight="bold" fill="#1d4ed8">논리 파이프라인 (이 글의 분류)</text>
+  <text x="742" y="34" text-anchor="middle" font-size="18" font-weight="bold" fill="#111827">Elasticsearch / OpenSearch (실제 이름)</text>
+
+  <!-- column divider -->
+  <line x1="470" y1="54" x2="470" y2="590" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- ===================== Row 1 — Indexing (offline) ===================== -->
+  <rect x="90" y="78" width="300" height="54" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="106" y="100" font-size="15" font-weight="bold" fill="#1d4ed8">Indexing</text>
+  <text x="106" y="120" font-size="12.5" fill="#374151">문서를 검색 가능한 형태로</text>
+
+  <rect x="545" y="78" width="395" height="54" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="560" y="100" font-size="15" font-weight="bold" fill="#111827">analyzer → 역색인 (inverted index)</text>
+  <text x="560" y="120" font-size="12.5" fill="#374151">char filter → tokenizer → token filter</text>
+
+  <line x1="392" y1="105" x2="539" y2="105" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===================== offline / online divider ===================== -->
+  <line x1="20" y1="150" x2="960" y2="150" stroke="#d1d5db" stroke-width="1" stroke-dasharray="6 5"/>
+  <rect x="270" y="140" width="440" height="19" fill="#ffffff"/>
+  <text x="490" y="154" text-anchor="middle" font-size="12" fill="#6b7280">여기부터 온라인 · 질의 시점 (수십~수백 ms 예산)</text>
+
+  <!-- ===================== Row 2 — Query Understanding ===================== -->
+  <rect x="90" y="166" width="300" height="54" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="106" y="188" font-size="15" font-weight="bold" fill="#1d4ed8">Query Understanding</text>
+  <text x="106" y="208" font-size="12.5" fill="#374151">오타·동의어·의도·속성 추출</text>
+
+  <rect x="545" y="166" width="395" height="54" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="560" y="188" font-size="15" font-weight="bold" fill="#111827">search request processor (OS)</text>
+  <text x="560" y="208" font-size="12.5" fill="#374151">질의 analyzer · synonym · fuzziness</text>
+  <text x="930" y="188" text-anchor="end" font-size="11" fill="#9ca3af">coordinator</text>
+
+  <line x1="392" y1="193" x2="539" y2="193" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===================== Row 3 — Retrieval ===================== -->
+  <rect x="90" y="254" width="300" height="54" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="106" y="276" font-size="15" font-weight="bold" fill="#1d4ed8">Retrieval</text>
+  <text x="106" y="296" font-size="12.5" fill="#374151">싸게 후보만 — 수억 → 수천</text>
+
+  <rect x="545" y="254" width="395" height="54" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="560" y="276" font-size="15" font-weight="bold" fill="#111827">query phase</text>
+  <text x="560" y="296" font-size="12.5" fill="#374151">각 샤드 로컬 실행 → doc ID·score만 반환</text>
+  <text x="930" y="276" text-anchor="end" font-size="11" fill="#9ca3af">샤드</text>
+
+  <line x1="392" y1="281" x2="539" y2="281" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- indexing feeds retrieval -->
+  <path d="M 88 105 L 62 105 L 62 281 L 84 281" fill="none" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="4 4" marker-end="url(#arrowGray)"/>
+  <text transform="rotate(-90 34 200)" x="34" y="200" text-anchor="middle" font-size="11" fill="#9ca3af">색인을 읽는다</text>
+
+  <!-- ===================== Row 4 — Ranking ===================== -->
+  <rect x="90" y="342" width="300" height="54" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="106" y="364" font-size="15" font-weight="bold" fill="#1d4ed8">Ranking</text>
+  <text x="106" y="384" font-size="12.5" fill="#374151">비싸게 순서 — 수천 → 수십</text>
+
+  <rect x="545" y="342" width="395" height="54" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="560" y="364" font-size="15" font-weight="bold" fill="#111827">phase results processor (OS) · rescore</text>
+  <text x="560" y="384" font-size="12.5" fill="#374151">샤드 결과 점수 정규화·결합 — hybrid 성립점</text>
+  <text x="930" y="364" text-anchor="end" font-size="11" fill="#9ca3af">coordinator</text>
+
+  <line x1="392" y1="369" x2="539" y2="369" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===================== Row 5 — fetch phase (no logical counterpart) ===================== -->
+  <rect x="90" y="430" width="300" height="54" rx="6" fill="none" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="240" y="462" text-anchor="middle" font-size="13" fill="#9ca3af">논리 분류에는 대응이 없다</text>
+
+  <rect x="545" y="430" width="395" height="54" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="560" y="452" font-size="15" font-weight="bold" fill="#111827">fetch phase</text>
+  <text x="560" y="472" font-size="12.5" fill="#374151">살아남은 문서만 본문·하이라이팅 채우기</text>
+  <text x="930" y="452" text-anchor="end" font-size="11" fill="#9ca3af">샤드</text>
+
+  <line x1="392" y1="457" x2="539" y2="457" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrowGray)"/>
+
+  <!-- ===================== Row 6 — Re-ranking ===================== -->
+  <rect x="90" y="518" width="300" height="54" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="106" y="540" font-size="15" font-weight="bold" fill="#1d4ed8">Re-ranking</text>
+  <text x="106" y="560" font-size="12.5" fill="#374151">다양성·비즈니스 규칙 — 화면으로</text>
+
+  <rect x="545" y="518" width="395" height="54" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="560" y="540" font-size="15" font-weight="bold" fill="#111827">search response processor (OS)</text>
+  <text x="560" y="560" font-size="12.5" fill="#374151">반환 직전 결과 가공 — 앱 레이어에서도 가능</text>
+  <text x="930" y="540" text-anchor="end" font-size="11" fill="#9ca3af">coordinator</text>
+
+  <line x1="392" y1="545" x2="539" y2="545" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===================== downward flow — left column ===================== -->
+  <g stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)">
+    <line x1="240" y1="222" x2="240" y2="250"/>
+    <line x1="240" y1="310" x2="240" y2="338"/>
+  </g>
+  <path d="M 240 398 L 240 412 L 420 412 L 420 504 L 240 504 L 240 514" fill="none" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrowGray)"/>
+
+  <!-- ===================== downward flow — right column ===================== -->
+  <g stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arrowGray)">
+    <line x1="742" y1="222" x2="742" y2="250"/>
+    <line x1="742" y1="310" x2="742" y2="338"/>
+    <line x1="742" y1="398" x2="742" y2="426"/>
+    <line x1="742" y1="486" x2="742" y2="514"/>
+  </g>
+
+  <!-- ===================== footnotes ===================== -->
+  <text x="20" y="614" font-size="12" fill="#6b7280">* query_then_fetch — 샤드는 문서 본문이 아니라 doc ID와 정렬값만 먼저 돌려준다. 노드 간 전송량을 줄이려는 설계다</text>
+  <text x="20" y="634" font-size="12" fill="#6b7280">* (OS) = OpenSearch search pipeline 고유 이름. Elasticsearch는 retriever·rescore 등으로 같은 자리를 채운다</text>
+</svg>
