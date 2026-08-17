@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="980" height="560" fill="#ffffff"/>
+
+  <!-- ===================== headers ===================== -->
+  <text x="40" y="40" font-size="15" font-weight="bold" fill="#374151">점수순 목록 — Ranking 결과</text>
+  <text x="40" y="60" font-size="12" fill="#9ca3af">점수는 하나도 틀리지 않았다</text>
+
+  <text x="540" y="40" font-size="15" font-weight="bold" fill="#1d4ed8">재정렬 후 — 화면에 나가는 목록</text>
+  <text x="540" y="60" font-size="12" fill="#2563eb">관련성을 조금 손해 보고 목록을 산다</text>
+
+  <!-- ===================== left list ===================== -->
+  <g font-size="13">
+    <rect x="40" y="80" width="380" height="32" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+    <text x="54" y="101" font-size="11.5" font-weight="bold" fill="#6b7280">1</text>
+    <text x="78" y="101" fill="#1d4ed8">나이키 에어맥스 · 검정</text>
+
+    <rect x="40" y="118" width="380" height="32" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+    <text x="54" y="139" font-size="11.5" font-weight="bold" fill="#6b7280">2</text>
+    <text x="78" y="139" fill="#1d4ed8">나이키 에어맥스 · 흰색</text>
+
+    <rect x="40" y="156" width="380" height="32" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+    <text x="54" y="177" font-size="11.5" font-weight="bold" fill="#6b7280">3</text>
+    <text x="78" y="177" fill="#1d4ed8">나이키 에어맥스 · 회색</text>
+
+    <rect x="40" y="194" width="380" height="32" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+    <text x="54" y="215" font-size="11.5" font-weight="bold" fill="#6b7280">4</text>
+    <text x="78" y="215" fill="#1d4ed8">나이키 에어맥스 · 파랑</text>
+
+    <rect x="40" y="232" width="380" height="32" rx="4" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+    <text x="54" y="253" font-size="11.5" font-weight="bold" fill="#6b7280">5</text>
+    <text x="78" y="253" fill="#92400e">아디다스 울트라부스트</text>
+
+    <rect x="40" y="270" width="380" height="32" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+    <text x="54" y="291" font-size="11.5" font-weight="bold" fill="#6b7280">6</text>
+    <text x="78" y="291" fill="#1d4ed8">나이키 에어맥스 · 빨강</text>
+
+    <rect x="40" y="308" width="380" height="32" rx="4" fill="#ede9fe" stroke="#7c3aed" stroke-width="1"/>
+    <text x="54" y="329" font-size="11.5" font-weight="bold" fill="#6b7280">7</text>
+    <text x="78" y="329" fill="#5b21b6">뉴발란스 574</text>
+
+    <rect x="40" y="346" width="380" height="32" rx="4" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1"/>
+    <text x="54" y="367" font-size="11.5" font-weight="bold" fill="#9ca3af">8</text>
+    <text x="78" y="367" fill="#6b7280">조던 1 · 품절</text>
+  </g>
+  <text x="40" y="400" font-size="11.5" fill="#d97706">같은 모델의 색상 변형 5개가 상위를 독식했다 — 선택지가 없다</text>
+
+  <!-- ===================== arrow ===================== -->
+  <line x1="436" y1="229" x2="524" y2="229" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="480" y="218" text-anchor="middle" font-size="12" font-weight="bold" fill="#2563eb">Re-ranking</text>
+
+  <!-- ===================== right list ===================== -->
+  <g font-size="13">
+    <rect x="540" y="80" width="380" height="32" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+    <text x="554" y="101" font-size="11.5" font-weight="bold" fill="#6b7280">1</text>
+    <text x="578" y="101" fill="#1d4ed8">나이키 에어맥스 · 검정</text>
+
+    <rect x="540" y="118" width="380" height="32" rx="4" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+    <text x="554" y="139" font-size="11.5" font-weight="bold" fill="#6b7280">2</text>
+    <text x="578" y="139" fill="#92400e">아디다스 울트라부스트</text>
+    <text x="906" y="139" text-anchor="end" font-size="10.5" fill="#d97706">↑ 5위에서</text>
+
+    <rect x="540" y="156" width="380" height="32" rx="4" fill="#ede9fe" stroke="#7c3aed" stroke-width="1"/>
+    <text x="554" y="177" font-size="11.5" font-weight="bold" fill="#6b7280">3</text>
+    <text x="578" y="177" fill="#5b21b6">뉴발란스 574</text>
+    <text x="906" y="177" text-anchor="end" font-size="10.5" fill="#7c3aed">↑ 7위에서</text>
+
+    <rect x="540" y="194" width="380" height="32" rx="4" fill="#ffffff" stroke="#6b7280" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="554" y="215" font-size="11.5" font-weight="bold" fill="#6b7280">4</text>
+    <text x="578" y="215" fill="#374151">[광고] 스니커즈 기획전</text>
+    <text x="906" y="215" text-anchor="end" font-size="10.5" fill="#6b7280">사업 규칙</text>
+
+    <rect x="540" y="232" width="380" height="32" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+    <text x="554" y="253" font-size="11.5" font-weight="bold" fill="#6b7280">5</text>
+    <text x="578" y="253" fill="#1d4ed8">나이키 에어맥스 · 흰색</text>
+
+    <rect x="540" y="270" width="380" height="32" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+    <text x="554" y="291" font-size="11.5" font-weight="bold" fill="#6b7280">6</text>
+    <text x="578" y="291" fill="#15803d">나이키 페가수스 · 신규</text>
+    <text x="906" y="291" text-anchor="end" font-size="10.5" fill="#16a34a">탐색 슬롯</text>
+
+    <rect x="540" y="308" width="380" height="32" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+    <text x="554" y="329" font-size="11.5" font-weight="bold" fill="#6b7280">7</text>
+    <text x="578" y="329" fill="#1d4ed8">나이키 에어맥스 · 회색</text>
+
+    <rect x="540" y="346" width="380" height="32" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+    <text x="554" y="367" font-size="11.5" font-weight="bold" fill="#6b7280">8</text>
+    <text x="578" y="367" fill="#1d4ed8">나이키 에어맥스 · 파랑</text>
+  </g>
+  <text x="540" y="400" font-size="11.5" fill="#16a34a">브랜드가 흩어지고, 품절은 목록 밖으로 밀렸다</text>
+
+  <!-- ===================== three reasons ===================== -->
+  <rect x="40" y="424" width="280" height="66" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="58" y="446" font-size="13" font-weight="bold" fill="#1d4ed8">① 목록 자체를 위해</text>
+  <text x="58" y="465" font-size="11.5" fill="#2563eb">같은 모델이 몰리지 않게 — MMR · collapse</text>
+  <text x="58" y="481" font-size="11" fill="#93c5fd">2·3위를 내리고 다른 브랜드를 올린다</text>
+
+  <rect x="350" y="424" width="280" height="66" rx="6" fill="#f9fafb" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="368" y="446" font-size="13" font-weight="bold" fill="#374151">② 사업을 위해</text>
+  <text x="368" y="465" font-size="11.5" fill="#6b7280">광고 슬롯 · 품절 내리기 · pinning</text>
+  <text x="368" y="481" font-size="11" fill="#9ca3af">관련성과 무관한 의도적 개입</text>
+
+  <rect x="660" y="424" width="280" height="66" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="678" y="446" font-size="13" font-weight="bold" fill="#15803d">③ 미래를 위해</text>
+  <text x="678" y="465" font-size="11.5" fill="#16a34a">데이터 없는 신규에 자리 하나 — 탐색</text>
+  <text x="678" y="481" font-size="11" fill="#86efac">지금의 관련성으로 미래의 데이터를 산다</text>
+
+  <!-- ===================== footnotes ===================== -->
+  <text x="40" y="522" font-size="12" fill="#6b7280">* 여기까지 모든 단계는 문서를 하나씩 독립적으로 평가했다. Re-ranking은 처음으로 "이미 뽑힌 것들"을 보고 판단한다 — 그래서 점수순 정렬로는 표현할 수 없다</text>
+  <text x="40" y="542" font-size="12" fill="#6b7280">* 셋 다 관련성을 손해 본다. NDCG는 내려가는데 클릭률은 오르는, 오프라인 지표와 온라인 지표가 갈리는 대표 지점이다</text>
+</svg>
