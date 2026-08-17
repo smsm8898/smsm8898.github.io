@@ -11,39 +11,50 @@
 
   <!-- ===================== LEFT: k1 saturation ===================== -->
   <text x="40" y="38" font-size="16" font-weight="bold" fill="#111827">k₁ — 반복의 이득은 포화한다</text>
-  <text x="40" y="58" font-size="12" fill="#6b7280">같은 단어가 100번 나와도 10번의 10배로 관련 있지는 않다</text>
+  <text x="40" y="58" font-size="12" fill="#6b7280">감쇠를 넣어도 끝이 없다 — BM25만 상한에서 멈춘다</text>
 
   <!-- axes -->
-  <line x1="80" y1="330" x2="450" y2="330" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arrowGray)"/>
-  <line x1="80" y1="330" x2="80" y2="90" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <line x1="80" y1="330" x2="462" y2="330" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <line x1="80" y1="330" x2="80" y2="80" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arrowGray)"/>
   <text x="265" y="356" text-anchor="middle" font-size="11.5" fill="#6b7280">term frequency — 이 문서에 몇 번 나왔나</text>
-  <text x="70" y="100" text-anchor="end" font-size="11.5" fill="#6b7280">점수</text>
-  <text x="70" y="115" text-anchor="end" font-size="11.5" fill="#6b7280">기여</text>
+  <text x="70" y="96" text-anchor="end" font-size="11.5" fill="#6b7280">점수</text>
+  <text x="70" y="111" text-anchor="end" font-size="11.5" fill="#6b7280">기여</text>
 
   <!-- asymptote -->
-  <line x1="80" y1="159" x2="440" y2="159" stroke="#93c5fd" stroke-width="1.2" stroke-dasharray="5 4"/>
-  <text x="440" y="153" text-anchor="end" font-size="11" fill="#2563eb">상한 = k₁ + 1</text>
+  <line x1="80" y1="186" x2="450" y2="186" stroke="#93c5fd" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <text x="448" y="180" text-anchor="end" font-size="11" fill="#2563eb">상한 = k₁ + 1 = 2.2</text>
 
-  <!-- linear (TF-IDF) -->
-  <path d="M 80,330 L 185,110" fill="none" stroke="#dc2626" stroke-width="2"/>
-  <path d="M 185,110 L 205,68" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrowRed)"/>
-  <text x="214" y="88" font-size="12" font-weight="bold" fill="#dc2626">TF-IDF — 선형</text>
-  <text x="214" y="105" font-size="11" fill="#dc2626">끝없이 올라간다</text>
+  <!-- raw tf (linear) -->
+  <path d="M 80,330 L 202,100" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <path d="M 202,100 L 218,70" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrowRed)"/>
+  <text x="228" y="86" font-size="12" font-weight="bold" fill="#dc2626">raw tf</text>
+  <text x="228" y="102" font-size="11" fill="#dc2626">tf 배수 = 점수 배수</text>
+
+  <!-- sqrt tf -->
+  <path d="M 80,330 L 115,264 L 150,237 L 185,216 L 220,199 L 255,183 L 290,169 L 325,156 L 360,144 L 395,133 L 430,122"
+        fill="none" stroke="#d97706" stroke-width="2"/>
+  <path d="M 430,122 L 456,98" fill="none" stroke="#d97706" stroke-width="2" stroke-dasharray="5 4"/>
 
   <!-- BM25 curve -->
-  <path d="M 80,330 L 115,247 L 150,219 L 185,205 L 220,196 L 255,190 L 290,186 L 325,182 L 360,180 L 395,178 L 430,176"
+  <path d="M 80,330 L 115,264 L 150,240 L 185,227 L 220,219 L 255,213 L 290,210 L 325,207 L 360,204 L 395,202 L 430,201"
         fill="none" stroke="#2563eb" stroke-width="2.5"/>
-  <circle cx="115" cy="247" r="4" fill="#2563eb"/>
-  <circle cx="150" cy="219" r="4" fill="#2563eb"/>
-  <circle cx="430" cy="176" r="4" fill="#2563eb"/>
-  <text x="300" y="216" font-size="12" font-weight="bold" fill="#1d4ed8">BM25 — 포화</text>
+  <circle cx="430" cy="201" r="4" fill="#2563eb"/>
 
-  <!-- annotations on curve -->
-  <text x="122" y="266" font-size="10.5" fill="#6b7280">1회 → 2회: 큰 차이</text>
-  <text x="428" y="200" text-anchor="end" font-size="10.5" fill="#6b7280">9회 → 10회: 거의 없음</text>
+  <!-- shared start point -->
+  <circle cx="115" cy="264" r="4" fill="#374151"/>
+  <text x="126" y="284" font-size="10.5" fill="#6b7280">tf=1 → 셋 다 1.0</text>
 
-  <text x="40" y="392" font-size="11.5" fill="#374151">분모에도 tf가 들어 있어서, tf가 커질수록 분자와 분모가 함께 커진다 — 그래서 상한에 수렴한다</text>
-  <text x="40" y="410" font-size="11.5" fill="#9ca3af">k₁ = 1.2 (Lucene 기본) · 크게 잡을수록 반복의 영향이 커진다</text>
+  <!-- legend -->
+  <rect x="248" y="252" width="206" height="72" rx="5" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="260" y1="270" x2="290" y2="270" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="298" y="274" font-size="11" fill="#374151">raw tf — 선형</text>
+  <line x1="260" y1="291" x2="290" y2="291" stroke="#d97706" stroke-width="2.5"/>
+  <text x="298" y="295" font-size="11" fill="#374151">√tf — 눌렀지만 끝이 없다</text>
+  <line x1="260" y1="312" x2="290" y2="312" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="298" y="316" font-size="11" fill="#374151">BM25 — 상한에서 멈춘다</text>
+
+  <text x="40" y="392" font-size="11.5" fill="#374151">tf가 10에서 100으로 늘 때 점수 배수 — raw tf는 10.0배, √tf는 3.2배, BM25는 1.1배</text>
+  <text x="40" y="410" font-size="11.5" fill="#9ca3af">k₁ = 1.2 (Lucene 기본) · 크게 잡을수록 반복의 영향이 커지고, 상한(k₁+1)도 함께 올라간다</text>
 
   <!-- ===================== divider ===================== -->
   <line x1="500" y1="24" x2="500" y2="416" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>
@@ -78,6 +89,6 @@
   <text x="558" y="342" font-size="11.5" fill="#6b7280">b = 0 : 길이를 완전히 무시</text>
   <text x="558" y="356" font-size="11.5" fill="#6b7280">b = 0.75 (Lucene 기본) · b = 1 : 최대로 반영</text>
 
-  <text x="540" y="392" font-size="11.5" fill="#374151">두 손잡이가 고친 것은 결국 TF-IDF의 결함 둘이다 — 선형인 tf와, 다루지 못한 문서 길이</text>
+  <text x="540" y="392" font-size="11.5" fill="#374151">두 손잡이가 고친 것은 결국 TF-IDF의 결함 둘이다 — 끝없이 자라는 tf와, 다루지 못한 문서 길이</text>
   <text x="540" y="410" font-size="11.5" fill="#9ca3af">기본값은 대체로 손대지 않는 편이 낫다. 튜닝하려면 평가 체계가 먼저다</text>
 </svg>
