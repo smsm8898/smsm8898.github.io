@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="980" height="500" fill="#ffffff"/>
+
+  <text x="40" y="40" font-size="17" font-weight="bold" fill="#111827">질의 하나가 구조화되기까지</text>
+  <text x="940" y="40" text-anchor="end" font-size="12" fill="#9ca3af">위로 갈수록 안전하고, 아래로 갈수록 강력하고 위험하다</text>
+
+  <!-- ===================== row 0: 사용자 입력 ===================== -->
+  <rect x="40" y="76" width="150" height="44" rx="6" fill="#374151"/>
+  <text x="115" y="103" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">사용자 입력</text>
+  <rect x="205" y="76" width="735" height="44" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="225" y="104" xml:space="preserve" font-size="15" fill="#374151">나이키   운도화  검정 10만원이하</text>
+  <text x="700" y="104" font-size="11.5" fill="#9ca3af">공백이 제멋대로, 오타, 값이 텍스트에 섞여 있다</text>
+
+  <line x1="570" y1="122" x2="570" y2="140" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===================== row 1: 정규화 ===================== -->
+  <rect x="40" y="142" width="150" height="44" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="115" y="163" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">① 정규화</text>
+  <text x="115" y="179" text-anchor="middle" font-size="11" fill="#6b7280">표기를 고친다</text>
+  <rect x="205" y="142" width="735" height="44" rx="6" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="225" y="170" font-size="15" fill="#374151">나이키 운도화 검정 10만원 이하</text>
+  <text x="700" y="170" font-size="11.5" fill="#9ca3af">공백 정리 · NFKC</text>
+
+  <line x1="570" y1="188" x2="570" y2="206" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===================== row 2: 오타 교정 ===================== -->
+  <rect x="40" y="208" width="150" height="44" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="115" y="229" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400e">② 오타 교정</text>
+  <text x="115" y="245" text-anchor="middle" font-size="11" fill="#a16207">어휘를 메운다</text>
+  <rect x="205" y="208" width="735" height="44" rx="6" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="225" y="236" font-size="15" fill="#374151">나이키 </text>
+  <rect x="288" y="215" width="62" height="30" rx="4" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+  <text x="319" y="236" text-anchor="middle" font-size="15" font-weight="bold" fill="#92400e">운동화</text>
+  <text x="360" y="236" font-size="15" fill="#374151">검정 10만원 이하</text>
+  <text x="700" y="236" font-size="11.5" fill="#a16207">편집 거리 · 자모 단위</text>
+
+  <line x1="570" y1="254" x2="570" y2="272" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===================== row 3: 동의어 확장 ===================== -->
+  <rect x="40" y="274" width="150" height="44" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="115" y="295" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400e">③ 동의어 확장</text>
+  <text x="115" y="311" text-anchor="middle" font-size="11" fill="#a16207">어휘를 메운다</text>
+  <rect x="205" y="274" width="735" height="44" rx="6" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="225" y="302" font-size="15" fill="#374151">나이키 </text>
+  <rect x="288" y="281" width="215" height="30" rx="4" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+  <text x="395" y="302" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">운동화 | 러닝화 | 스니커즈</text>
+  <text x="513" y="302" font-size="15" fill="#374151">검정 10만원 이하</text>
+  <text x="700" y="302" font-size="11.5" fill="#a16207">재현율 ↑ 정밀도 ↓</text>
+
+  <line x1="570" y1="320" x2="570" y2="338" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===================== row 4: 속성 추출 → 분기 ===================== -->
+  <rect x="40" y="340" width="150" height="44" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="115" y="361" text-anchor="middle" font-size="13" font-weight="bold" fill="#1d4ed8">④ 속성 추출</text>
+  <text x="115" y="377" text-anchor="middle" font-size="11" fill="#2563eb">구조를 읽는다</text>
+  <text x="205" y="357" font-size="12" fill="#2563eb">텍스트로 매칭할 것과, 값으로 걸러낼 것을 갈라 놓는다</text>
+  <text x="205" y="376" font-size="11.5" fill="#9ca3af">여기서 잘못 뽑으면 필터가 결과를 0건으로 만든다 — 아래 단계는 되돌리지 못한다</text>
+
+  <!-- fork -->
+  <path d="M 570 386 L 570 398 L 385 398 L 385 412" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M 570 386 L 570 398 L 760 398 L 760 412" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- left: text matching -->
+  <rect x="205" y="414" width="360" height="52" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="222" y="434" font-size="12" font-weight="bold" fill="#1d4ed8">텍스트 매칭 — 역색인</text>
+  <text x="222" y="454" font-size="13.5" fill="#1d4ed8">운동화 | 러닝화 | 스니커즈  → BM25 점수 대상</text>
+
+  <!-- right: filter -->
+  <rect x="580" y="414" width="360" height="52" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+  <text x="597" y="434" font-size="12" font-weight="bold" fill="#92400e">필터 — doc values</text>
+  <text x="597" y="454" font-size="13.5" fill="#92400e">brand=나이키 · color=검정 · price ≤ 100000</text>
+</svg>
