@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="arrowBlue4" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowAmber4" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#d97706"/>
+    </marker>
+    <marker id="arrowGray4" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="980" height="420" fill="#ffffff"/>
+
+  <text x="40" y="34" font-size="15" font-weight="bold" fill="#374151">실시간 입찰(RTB) — 회사들 사이에서 열리는 경매</text>
+  <text x="40" y="56" font-size="11.5" fill="#6b7280">검색·추천은 한 회사 안의 기능이지만, 오픈 웹 광고는 여러 회사가 프로토콜로 연결된 시장이다.</text>
+
+  <!-- ===== boxes ===== -->
+  <rect x="30" y="150" width="118" height="86" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="89" y="184" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">광고주</text>
+  <text x="89" y="204" text-anchor="middle" font-size="10" fill="#6b7280">예산 · 목표</text>
+
+  <rect x="196" y="150" width="160" height="86" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="276" y="180" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1d4ed8">DSP</text>
+  <text x="276" y="200" text-anchor="middle" font-size="10.5" fill="#1d4ed8">광고주 대신 입찰한다</text>
+  <text x="276" y="218" text-anchor="middle" font-size="10" fill="#2563eb">Demand Side Platform</text>
+
+  <rect x="400" y="150" width="180" height="86" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+  <text x="490" y="180" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">Ad Exchange</text>
+  <text x="490" y="200" text-anchor="middle" font-size="10.5" fill="#a16207">경매가 열리는 장</text>
+  <text x="490" y="218" text-anchor="middle" font-size="10" fill="#d97706">지면 1회씩 실시간 거래</text>
+
+  <rect x="624" y="150" width="160" height="86" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="704" y="180" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1d4ed8">SSP</text>
+  <text x="704" y="200" text-anchor="middle" font-size="10.5" fill="#1d4ed8">매체 대신 판매한다</text>
+  <text x="704" y="218" text-anchor="middle" font-size="10" fill="#2563eb">Supply Side Platform</text>
+
+  <rect x="828" y="150" width="124" height="86" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="890" y="184" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">매체</text>
+  <text x="890" y="204" text-anchor="middle" font-size="10" fill="#6b7280">앱 · 웹 지면</text>
+
+  <line x1="150" y1="193" x2="192" y2="193" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrowGray4)"/>
+  <text x="171" y="216" text-anchor="middle" font-size="10" fill="#6b7280">위임</text>
+
+  <!-- ===== ① bid request : 매체 → SSP → Exchange → DSP ===== -->
+  <path d="M 890 148 L 890 100 L 276 100 L 276 144" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrowBlue4)"/>
+  <line x1="704" y1="100" x2="704" y2="146" stroke="#93c5fd" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="490" y1="100" x2="490" y2="146" stroke="#93c5fd" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <rect x="440" y="78" width="300" height="18" fill="#ffffff"/>
+  <text x="590" y="91" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#1d4ed8">① bid request — &quot;이 지면, 살 사람?&quot; (OpenRTB)</text>
+
+  <!-- ===== ② bid response : DSP → Exchange → SSP → 매체 ===== -->
+  <path d="M 276 240 L 276 288 L 890 288 L 890 242" fill="none" stroke="#d97706" stroke-width="1.8" marker-end="url(#arrowAmber4)"/>
+  <line x1="490" y1="288" x2="490" y2="240" stroke="#fcd34d" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="704" y1="288" x2="704" y2="240" stroke="#fcd34d" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <rect x="420" y="292" width="340" height="18" fill="#ffffff"/>
+  <text x="590" y="306" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#92400e">② bid response — 입찰가 + 소재를 돌려준다</text>
+  <text x="590" y="326" text-anchor="middle" font-size="11" fill="#a16207">③ Exchange가 경매를 붙이고, 낙찰된 소재가 화면에 렌더된다</text>
+
+  <text x="490" y="358" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#d97706">①~③ 전부 합쳐 보통 100ms 안 — 페이지가 그려지는 사이에 끝난다</text>
+
+  <text x="40" y="388" font-size="12" fill="#6b7280">* walled garden(구글 · 메타 · 아마존 등)은 이 사슬 전체를 한 회사 안에 갖고 있다 — 회사 간 왕복도, 데이터가 밖으로 나갈 일도 없다</text>
+  <text x="40" y="408" font-size="12" fill="#6b7280">* 여기에 header bidding(Prebid)이 붙으면 매체가 여러 경매를 동시에 열어 값을 비교한다. 지면 하나에 경매가 여러 겹으로 쌓인다</text>
+</svg>

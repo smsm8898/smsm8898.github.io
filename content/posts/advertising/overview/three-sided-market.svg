@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 430" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="arrowAmber" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#d97706"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="980" height="430" fill="#ffffff"/>
+
+  <text x="40" y="34" font-size="15" font-weight="bold" fill="#374151">3자 시장 — 보는 쪽과 돈을 내는 쪽이 다르다</text>
+  <text x="40" y="56" font-size="11.5" fill="#6b7280">검색·추천에는 &quot;지불자&quot;라는 자리가 없다. 이 한 칸이 늘어난 것이 광고의 모든 차이를 만든다.</text>
+
+  <!-- ============ 광고주 ============ -->
+  <rect x="40" y="80" width="222" height="92" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+  <text x="151" y="110" text-anchor="middle" font-size="15" font-weight="bold" fill="#92400e">광고주</text>
+  <text x="151" y="133" text-anchor="middle" font-size="11.5" fill="#a16207">무언가를 팔고 싶다</text>
+  <text x="151" y="153" text-anchor="middle" font-size="11.5" fill="#a16207">예: 신발 브랜드 · 게임사</text>
+
+  <!-- ============ 플랫폼 ============ -->
+  <rect x="334" y="80" width="288" height="92" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+  <text x="478" y="110" text-anchor="middle" font-size="15" font-weight="bold" fill="#1d4ed8">광고 플랫폼</text>
+  <text x="478" y="133" text-anchor="middle" font-size="11.5" fill="#1d4ed8">노출 1회마다 경매를 연다</text>
+  <text x="478" y="153" text-anchor="middle" font-size="11.5" fill="#1d4ed8">누구의 광고를, 얼마에?</text>
+
+  <!-- ============ 매체 ============ -->
+  <rect x="696" y="80" width="244" height="92" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+  <text x="818" y="110" text-anchor="middle" font-size="15" font-weight="bold" fill="#92400e">매체 (지면 소유자)</text>
+  <text x="818" y="133" text-anchor="middle" font-size="11.5" fill="#a16207">공짜 서비스로 사람을 모았다</text>
+  <text x="818" y="153" text-anchor="middle" font-size="11.5" fill="#a16207">예: 앱 · 포털 · 커머스</text>
+
+  <!-- ============ 사용자 ============ -->
+  <rect x="334" y="280" width="288" height="86" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.8"/>
+  <text x="478" y="310" text-anchor="middle" font-size="15" font-weight="bold" fill="#374151">사용자</text>
+  <text x="478" y="332" text-anchor="middle" font-size="11.5" fill="#6b7280">광고를 요청한 적이 없다</text>
+  <text x="478" y="352" text-anchor="middle" font-size="11.5" fill="#6b7280">돈도 내지 않는다</text>
+
+  <!-- ============ 돈의 흐름 ============ -->
+  <line x1="264" y1="126" x2="330" y2="126" stroke="#d97706" stroke-width="1.8" marker-end="url(#arrowAmber)"/>
+  <text x="297" y="113" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#a16207">입찰 · 예산</text>
+
+  <line x1="624" y1="126" x2="692" y2="126" stroke="#d97706" stroke-width="1.8" marker-end="url(#arrowAmber)"/>
+  <text x="658" y="113" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#a16207">수익 배분</text>
+
+  <!-- ============ 광고 노출 ============ -->
+  <line x1="420" y1="174" x2="420" y2="276" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrowBlue)"/>
+  <text x="408" y="222" text-anchor="end" font-size="12" font-weight="bold" fill="#1d4ed8">광고 노출</text>
+  <text x="408" y="242" text-anchor="end" font-size="10.5" fill="#2563eb">원한 적 없지만 보인다</text>
+
+  <!-- ============ 무료 콘텐츠 (매체 → 사용자) ============ -->
+  <path d="M 820 174 L 820 240 L 610 240 L 610 274" fill="none" stroke="#6b7280" stroke-width="1.6" marker-end="url(#arrowGray)"/>
+  <text x="715" y="232" text-anchor="middle" font-size="11" fill="#6b7280">무료 콘텐츠 · 서비스</text>
+
+  <!-- ============ 시간·주의 (사용자 → 매체) ============ -->
+  <path d="M 626 300 L 890 300 L 890 178" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrowBlue)"/>
+  <text x="757" y="293" text-anchor="middle" font-size="11" font-weight="bold" fill="#1d4ed8">시간 · 주의 = 팔 수 있는 재고</text>
+
+  <!-- ============ 전환 (사용자 → 광고주) ============ -->
+  <path d="M 330 320 L 24 320 L 24 130 L 36 130" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrowBlue)"/>
+  <text x="180" y="312" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#1d4ed8">클릭 · 구매 (전환)</text>
+  <text x="180" y="338" text-anchor="middle" font-size="10.5" fill="#2563eb">광고주가 실제로 사려는 것은 노출이 아니라 이쪽이다</text>
+
+  <!-- ============ footnotes ============ -->
+  <text x="40" y="392" font-size="12" fill="#6b7280">* 주황 화살표는 돈, 파란 화살표는 사람의 주의와 행동이다. 돈은 왼쪽에서 오른쪽으로만 흐르고, 사용자는 그 흐름 밖에 있다</text>
+  <text x="40" y="412" font-size="12" fill="#6b7280">* 세 주체의 이해가 충돌한다 — 광고주는 싸게 많이, 매체는 비싸게 팔고, 사용자는 애초에 안 보고 싶다. 이 충돌을 조정하는 장치가 경매다</text>
+</svg>

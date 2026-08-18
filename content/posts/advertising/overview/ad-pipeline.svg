@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 592" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="arrowAmber2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#d97706"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="980" height="592" fill="#ffffff"/>
+
+  <text x="40" y="34" font-size="15" font-weight="bold" fill="#374151">같은 깔때기, 다른 마지막 단계</text>
+
+  <text x="225" y="66" text-anchor="middle" font-size="14" font-weight="bold" fill="#6b7280">검색 · 추천 파이프라인</text>
+  <text x="755" y="66" text-anchor="middle" font-size="14" font-weight="bold" fill="#1d4ed8">광고 파이프라인</text>
+
+  <!-- ===== row 1 ===== -->
+  <rect x="60" y="84" width="330" height="58" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="225" y="108" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#374151">Query Understanding</text>
+  <text x="225" y="128" text-anchor="middle" font-size="11" fill="#6b7280">질의를 시스템이 다룰 형태로</text>
+
+  <rect x="590" y="84" width="330" height="58" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="755" y="108" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1d4ed8">Ad Request</text>
+  <text x="755" y="128" text-anchor="middle" font-size="11" fill="#1d4ed8">지면 · 사용자 컨텍스트 수집</text>
+
+  <line x1="394" y1="113" x2="468" y2="113" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="512" y1="113" x2="586" y2="113" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="490" y="119" text-anchor="middle" font-size="16" fill="#9ca3af">≈</text>
+
+  <!-- ===== row 2 ===== -->
+  <rect x="60" y="156" width="330" height="58" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="225" y="180" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#374151">Retrieval — 후보 생성</text>
+  <text x="225" y="200" text-anchor="middle" font-size="11" fill="#6b7280">싼 연산으로 좁힌다 · 수억 → 수천</text>
+
+  <rect x="590" y="156" width="330" height="58" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="755" y="180" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1d4ed8">Targeting — 후보 선별</text>
+  <text x="755" y="200" text-anchor="middle" font-size="11" fill="#1d4ed8">조건 · 예산 잔액 · 심의 통과 · 수백만 → 수천</text>
+
+  <line x1="394" y1="185" x2="468" y2="185" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="512" y1="185" x2="586" y2="185" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="490" y="191" text-anchor="middle" font-size="16" fill="#9ca3af">≈</text>
+
+  <!-- ===== row 3 ===== -->
+  <rect x="60" y="228" width="330" height="58" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="225" y="252" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#374151">Ranking</text>
+  <text x="225" y="272" text-anchor="middle" font-size="11" fill="#6b7280">비싼 모델로 순서 · 수천 → 수십</text>
+
+  <rect x="590" y="228" width="330" height="58" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="755" y="252" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1d4ed8">Prediction — pCTR · pCVR</text>
+  <text x="755" y="272" text-anchor="middle" font-size="11" fill="#1d4ed8">누를 확률 · 살 확률을 예측</text>
+
+  <line x1="394" y1="257" x2="468" y2="257" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="512" y1="257" x2="586" y2="257" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="490" y="263" text-anchor="middle" font-size="16" fill="#9ca3af">≈</text>
+
+  <!-- ===== row 4 ===== -->
+  <rect x="60" y="300" width="330" height="58" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="225" y="324" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#374151">Re-ranking</text>
+  <text x="225" y="344" text-anchor="middle" font-size="11" fill="#6b7280">다양성 · 규칙 · 수십 → 화면</text>
+
+  <rect x="590" y="300" width="330" height="58" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+  <text x="755" y="324" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#92400e">Auction — 경매</text>
+  <text x="755" y="344" text-anchor="middle" font-size="11" fill="#a16207">순위와 가격을 동시에 정한다</text>
+
+  <line x1="394" y1="329" x2="586" y2="329" stroke="#d97706" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <rect x="428" y="306" width="124" height="17" fill="#ffffff"/>
+  <text x="490" y="319" text-anchor="middle" font-size="11" font-weight="bold" fill="#d97706">여기서 갈린다</text>
+
+  <!-- ===== divider ===== -->
+  <line x1="60" y1="378" x2="920" y2="378" stroke="#d97706" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <rect x="250" y="366" width="480" height="22" fill="#ffffff"/>
+  <text x="490" y="382" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#d97706">↓ 아래 두 칸은 검색 · 추천에 아예 없다 — 돈이 개입해서 생긴 단계</text>
+
+  <!-- ===== row 5 ===== -->
+  <rect x="60" y="398" width="330" height="58" rx="6" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="225" y="433" text-anchor="middle" font-size="13" fill="#9ca3af">— 대응하는 단계 없음 —</text>
+
+  <rect x="590" y="398" width="330" height="58" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+  <text x="755" y="422" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#92400e">Delivery Control — 송출 제어</text>
+  <text x="755" y="442" text-anchor="middle" font-size="11" fill="#a16207">예산 페이싱 · 빈도 제한 · 정책 필터</text>
+
+  <!-- ===== row 6 ===== -->
+  <rect x="60" y="470" width="330" height="58" rx="6" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="225" y="505" text-anchor="middle" font-size="13" fill="#9ca3af">— 대응하는 단계 없음 —</text>
+
+  <rect x="590" y="470" width="330" height="58" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+  <text x="755" y="494" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#92400e">Measurement — 측정 · 정산</text>
+  <text x="755" y="514" text-anchor="middle" font-size="11" fill="#a16207">전환 귀속 · 효과 증명 · 과금</text>
+
+  <!-- ===== footnotes ===== -->
+  <text x="40" y="558" font-size="12" fill="#6b7280">* 1~4는 사용자가 화면을 여는 동안, 보통 100ms 안에 끝난다. 실시간 입찰(RTB)이라면 그 안에 회사 간 네트워크 왕복까지 들어간다</text>
+  <text x="40" y="578" font-size="12" fill="#6b7280">* 5는 하루 종일 돌아가는 제어 루프이고, 6은 며칠 뒤에야 답이 오는 오프라인 단계다 — 클릭은 즉시지만 구매는 즉시가 아니다</text>
+</svg>

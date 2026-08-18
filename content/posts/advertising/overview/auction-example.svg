@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 545" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <rect x="0" y="0" width="980" height="545" fill="#ffffff"/>
+
+  <text x="40" y="34" font-size="15" font-weight="bold" fill="#374151">경매 한 번 — 가장 높게 적은 사람이 이기지 않는다</text>
+  <text x="40" y="56" font-size="11.5" fill="#6b7280">커머스 앱에서 사용자가 &quot;런닝화&quot;를 검색했다. 검색 결과 세 번째 칸이 광고 지면이고, 이 한 칸을 놓고 경매가 열린다.</text>
+
+  <!-- ===== table frame ===== -->
+  <rect x="60" y="84" width="860" height="42" fill="#f3f4f6"/>
+  <rect x="60" y="174" width="860" height="48" fill="#fffbeb"/>
+  <rect x="60" y="84" width="860" height="186" fill="none" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="60" y1="126" x2="920" y2="126" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="60" y1="174" x2="920" y2="174" stroke="#d1d5db" stroke-width="1"/>
+  <line x1="60" y1="222" x2="920" y2="222" stroke="#d1d5db" stroke-width="1"/>
+  <line x1="170" y1="84" x2="170" y2="270" stroke="#d1d5db" stroke-width="1"/>
+  <line x1="370" y1="84" x2="370" y2="270" stroke="#d1d5db" stroke-width="1"/>
+  <line x1="570" y1="84" x2="570" y2="270" stroke="#d1d5db" stroke-width="1"/>
+  <line x1="800" y1="84" x2="800" y2="270" stroke="#d1d5db" stroke-width="1"/>
+  <rect x="60" y="174" width="860" height="48" fill="none" stroke="#d97706" stroke-width="2"/>
+
+  <!-- ===== header ===== -->
+  <g font-size="11.5" font-weight="bold" fill="#374151" text-anchor="middle">
+    <text x="115" y="111">광고주</text>
+    <text x="270" y="111">입찰가 (클릭당 최대)</text>
+    <text x="470" y="111">pCTR (예측 클릭률)</text>
+    <text x="685" y="111">eCPM (노출 1,000회당 기대수익)</text>
+    <text x="860" y="111">결과</text>
+  </g>
+
+  <!-- ===== row A ===== -->
+  <text x="115" y="156" text-anchor="middle" font-size="13" fill="#374151">A 브랜드</text>
+  <text x="270" y="156" text-anchor="middle" font-size="13" fill="#374151">500원</text>
+  <text x="470" y="156" text-anchor="middle" font-size="13" fill="#374151">1.0%</text>
+  <text x="685" y="156" text-anchor="middle" font-size="12.5" fill="#374151">500 × 0.010 × 1000 = 5,000원</text>
+  <text x="860" y="156" text-anchor="middle" font-size="13" fill="#6b7280">2위</text>
+
+  <!-- ===== row B (winner) ===== -->
+  <text x="115" y="204" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400e">B 브랜드</text>
+  <text x="270" y="204" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400e">300원</text>
+  <text x="470" y="204" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400e">2.0%</text>
+  <text x="685" y="204" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#92400e">300 × 0.020 × 1000 = 6,000원</text>
+  <text x="860" y="204" text-anchor="middle" font-size="13" font-weight="bold" fill="#d97706">★ 낙찰</text>
+
+  <!-- ===== row C ===== -->
+  <text x="115" y="252" text-anchor="middle" font-size="13" fill="#374151">C 브랜드</text>
+  <text x="270" y="252" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc2626">900원</text>
+  <text x="470" y="252" text-anchor="middle" font-size="13" fill="#374151">0.4%</text>
+  <text x="685" y="252" text-anchor="middle" font-size="12.5" fill="#374151">900 × 0.004 × 1000 = 3,600원</text>
+  <text x="860" y="252" text-anchor="middle" font-size="13" fill="#6b7280">3위</text>
+
+  <text x="60" y="290" font-size="11" fill="#6b7280">↑ 정렬 기준은 입찰가가 아니라 eCPM이다. 매체가 버는 돈은 &quot;얼마를 부르나 × 실제로 눌리나&quot;로 정해지기 때문이다</text>
+
+  <!-- ===== GSP callout ===== -->
+  <rect x="60" y="308" width="860" height="106" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+  <text x="86" y="336" font-size="13.5" font-weight="bold" fill="#92400e">낙찰자 B가 실제로 내는 금액 — 차순위 가격(GSP)</text>
+  <text x="86" y="366" font-size="13.5" fill="#78350f">차순위 eCPM ÷ (내 pCTR × 1000)  =  5,000 ÷ (0.020 × 1000)  =  클릭당 250원</text>
+  <text x="86" y="392" font-size="11.5" fill="#a16207">B는 300원까지 낼 생각이었지만 250원만 낸다 — 2위를 겨우 이길 만큼만 내면 순위가 바뀌지 않기 때문이다</text>
+
+  <!-- ===== takeaways ===== -->
+  <text x="60" y="446" font-size="12.5" fill="#374151">• 가장 높게 적은 C(900원)가 졌다 — 아무도 누르지 않는 광고는 매체에 돈을 벌어주지 못한다</text>
+  <text x="60" y="470" font-size="12.5" fill="#374151">• 이긴 B는 자기가 적은 값이 아니라 차순위를 넘는 최소 금액을 낸다 — 그래서 입찰가를 실제 가치보다 낮게 적을 이유가 줄어든다</text>
+  <text x="60" y="494" font-size="12.5" fill="#374151">• pCTR이 틀리면 순위와 가격이 같이 틀어진다 — 검색 랭킹과 달리 점수의 절대값이 그대로 청구서에 곱해진다</text>
+
+  <text x="60" y="528" font-size="11.5" fill="#6b7280">* 실제 경매에는 여기에 광고 품질 점수, 최저 입찰가(reserve price), 예산 잔액, 정책 심의가 더 붙는다</text>
+</svg>
