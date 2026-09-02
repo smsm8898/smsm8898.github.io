@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 430" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="980" height="430" fill="#ffffff"/>
+
+  <text x="40" y="36" font-size="16" font-weight="bold" fill="#111827">같은 세 숫자에서 네 가지 답이 나온다</text>
+  <text x="40" y="56" font-size="12" fill="#6b7280">다른 것은 알고리즘이 아니라 — 라벨을 누가 정하나</text>
+
+  <!-- ===================== LEFT: 재료 ===================== -->
+  <rect x="40" y="90" width="300" height="290" rx="8" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="62" y="118" font-size="13" font-weight="bold" fill="#111827">재료 — 거래 이력 하나</text>
+
+  <line x1="62" y1="165" x2="312" y2="165" stroke="#d1d5db" stroke-width="1.5"/>
+  <circle cx="78" cy="165" r="5" fill="#2563eb"/>
+  <circle cx="105" cy="165" r="5" fill="#2563eb"/>
+  <circle cx="140" cy="165" r="5" fill="#2563eb"/>
+  <circle cx="185" cy="165" r="5" fill="#2563eb"/>
+  <circle cx="232" cy="165" r="5" fill="#2563eb"/>
+  <line x1="300" y1="148" x2="300" y2="182" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="300" y="142" text-anchor="middle" font-size="11" fill="#6b7280">오늘</text>
+
+  <text x="62" y="212" font-size="12" fill="#374151">F  반복 구매 5회</text>
+  <text x="62" y="236" font-size="12" fill="#374151">R  마지막 구매 후 62일</text>
+  <text x="62" y="260" font-size="12" fill="#374151">M  거래당 평균 3.2만원</text>
+  <text x="62" y="284" font-size="12" fill="#374151">T  관찰 410일</text>
+
+  <text x="62" y="324" font-size="11.5" fill="#6b7280">추천이 쓰는 로그와 원본은 같다.</text>
+  <text x="62" y="342" font-size="11.5" fill="#6b7280">접는 축만 다르다 — 시간 축으로 접는다.</text>
+
+  <line x1="352" y1="235" x2="380" y2="235" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <!-- ===================== RIGHT: 네 계열 ===================== -->
+  <!-- 1. RFM -->
+  <rect x="392" y="90" width="270" height="138" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+  <rect x="392" y="90" width="4" height="138" rx="2" fill="#2563eb"/>
+  <text x="412" y="120" font-size="13" font-weight="bold" fill="#111827">RFM 규칙</text>
+  <text x="412" y="152" font-size="14.5" font-weight="bold" fill="#2563eb">R2 · F4 · M5</text>
+  <text x="412" y="180" font-size="11.5" fill="#6b7280">사람이 자른다</text>
+  <text x="412" y="198" font-size="11.5" fill="#9ca3af">과거의 상대 순위 — 미래는 모른다</text>
+
+  <!-- 2. 군집 -->
+  <rect x="680" y="90" width="270" height="138" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+  <rect x="680" y="90" width="4" height="138" rx="2" fill="#7c3aed"/>
+  <text x="700" y="120" font-size="13" font-weight="bold" fill="#111827">비지도 군집</text>
+  <text x="700" y="152" font-size="14.5" font-weight="bold" fill="#7c3aed">군집 #3</text>
+  <text x="700" y="180" font-size="11.5" fill="#6b7280">데이터가 뭉친다</text>
+  <text x="700" y="198" font-size="11.5" fill="#9ca3af">이름이 없다 — 다음 달엔 #5일 수도</text>
+
+  <!-- 3. 지도 학습 -->
+  <rect x="392" y="242" width="270" height="138" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+  <rect x="392" y="242" width="4" height="138" rx="2" fill="#d97706"/>
+  <text x="412" y="272" font-size="13" font-weight="bold" fill="#111827">지도 학습</text>
+  <text x="412" y="304" font-size="14.5" font-weight="bold" fill="#d97706">P(90일 무구매) = 0.71</text>
+  <text x="412" y="332" font-size="11.5" fill="#6b7280">라벨을 우리가 발명했다</text>
+  <text x="412" y="350" font-size="11.5" fill="#9ca3af">모델은 이탈이 아니라 「90일」을 배운다</text>
+
+  <!-- 4. 확률 모형 -->
+  <rect x="680" y="242" width="270" height="138" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+  <rect x="680" y="242" width="4" height="138" rx="2" fill="#059669"/>
+  <text x="700" y="272" font-size="13" font-weight="bold" fill="#111827">확률 모형 (BTYD)</text>
+  <text x="700" y="304" font-size="14.5" font-weight="bold" fill="#059669">P(alive) = 0.38</text>
+  <text x="700" y="332" font-size="11.5" fill="#6b7280">아무도 라벨을 정하지 않는다</text>
+  <text x="700" y="350" font-size="11.5" fill="#9ca3af">떠남은 관측된 적이 없는 잠재 상태다</text>
+
+  <text x="40" y="412" font-size="11.5" fill="#6b7280">규칙은 사람이, 군집은 데이터가, 지도 학습은 우리가 발명해서, 확률 모형은 아무도 정하지 않는다.</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 430" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <rect x="0" y="0" width="980" height="430" fill="#ffffff"/>
+
+  <text x="40" y="36" font-size="16" font-weight="bold" fill="#111827">이탈은 어디서 보이고, 어디서 보이지 않는가</text>
+  <text x="40" y="56" font-size="12" fill="#6b7280">종료 사건이 없으면, 똑같은 관측에서 다른 진실이 나온다</text>
+
+  <!-- ===================== 계약형 ===================== -->
+  <text x="40" y="100" font-size="13" font-weight="bold" fill="#111827">계약형 — 구독 · 통신 · 보험</text>
+  <text x="40" y="118" font-size="11.5" fill="#6b7280">종료가 사건으로 남는다</text>
+
+  <line x1="230" y1="150" x2="520" y2="150" stroke="#d1d5db" stroke-width="1.5"/>
+  <line x1="520" y1="150" x2="900" y2="150" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <circle cx="250" cy="150" r="5" fill="#6b7280"/>
+  <circle cx="295" cy="150" r="5" fill="#6b7280"/>
+  <circle cx="340" cy="150" r="5" fill="#6b7280"/>
+  <circle cx="385" cy="150" r="5" fill="#6b7280"/>
+  <circle cx="430" cy="150" r="5" fill="#6b7280"/>
+  <circle cx="475" cy="150" r="5" fill="#6b7280"/>
+
+  <line x1="520" y1="126" x2="520" y2="174" stroke="#dc2626" stroke-width="2"/>
+  <text x="520" y="118" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc2626">해지</text>
+  <text x="900" y="118" text-anchor="end" font-size="12" font-weight="bold" fill="#2563eb">이진 분류로 풀린다</text>
+  <text x="540" y="172" font-size="11.5" fill="#6b7280">이후의 공백은 「안 산 것」이 아니라 「끝난 것」 — 라벨이 관측된다</text>
+
+  <line x1="40" y1="205" x2="940" y2="205" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- ===================== 비계약형 ===================== -->
+  <text x="40" y="245" font-size="13" font-weight="bold" fill="#111827">비계약형 — 커머스 · 리테일 · 게임</text>
+  <text x="40" y="263" font-size="11.5" fill="#6b7280">종료 사건이 없다</text>
+
+  <rect x="232" y="282" width="428" height="96" rx="6" fill="#f9fafb" stroke="#e5e7eb"/>
+
+  <text x="40" y="310" font-size="12" fill="#374151">고객 A</text>
+  <text x="40" y="360" font-size="12" fill="#374151">고객 B</text>
+
+  <line x1="240" y1="305" x2="660" y2="305" stroke="#d1d5db" stroke-width="1.5"/>
+  <line x1="660" y1="305" x2="900" y2="305" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="240" y1="355" x2="660" y2="355" stroke="#d1d5db" stroke-width="1.5"/>
+  <line x1="660" y1="355" x2="900" y2="355" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+  <circle cx="258" cy="305" r="5" fill="#6b7280"/>
+  <circle cx="300" cy="305" r="5" fill="#6b7280"/>
+  <circle cx="352" cy="305" r="5" fill="#6b7280"/>
+  <circle cx="420" cy="305" r="5" fill="#6b7280"/>
+  <circle cx="478" cy="305" r="5" fill="#6b7280"/>
+  <circle cx="258" cy="355" r="5" fill="#6b7280"/>
+  <circle cx="300" cy="355" r="5" fill="#6b7280"/>
+  <circle cx="352" cy="355" r="5" fill="#6b7280"/>
+  <circle cx="420" cy="355" r="5" fill="#6b7280"/>
+  <circle cx="478" cy="355" r="5" fill="#6b7280"/>
+
+  <text x="446" y="370" text-anchor="middle" font-size="11.5" fill="#6b7280">여기까지 두 사람의 기록이 완전히 같다</text>
+
+  <line x1="660" y1="272" x2="660" y2="388" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="660" y="266" text-anchor="middle" font-size="11.5" fill="#6b7280">오늘 (T)</text>
+  <text x="790" y="266" text-anchor="middle" font-size="11.5" fill="#9ca3af">아직 관측되지 않은 구간</text>
+
+  <circle cx="730" cy="305" r="5" fill="none" stroke="#059669" stroke-width="1.8" stroke-dasharray="3 2"/>
+  <text x="748" y="310" font-size="12" fill="#059669">→ 살아 있었다</text>
+  <text x="676" y="360" font-size="12" fill="#dc2626">→ 다시 오지 않았다</text>
+
+  <text x="40" y="412" font-size="11.5" fill="#6b7280">그래서 「90일 무구매 = 이탈」은 관측이 아니라 우리가 그은 선이다 — 모델은 이탈이 아니라 그 선을 학습한다.</text>
+</svg>
