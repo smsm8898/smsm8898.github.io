@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 400" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="arrBlue" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrAmber" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#d97706"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="980" height="400" fill="#ffffff"/>
+
+  <text x="40" y="34" font-size="15" font-weight="bold" fill="#374151">축 전치 — 무엇을 정렬하나</text>
+  <text x="40" y="56" font-size="11.5" fill="#6b7280">검색·추천·광고는 한 사람에게 보여줄 아이템을 정렬한다. 마케팅은 한 캠페인을 받을 사람을 고른다.</text>
+
+  <!-- ============ 왼쪽: 검색·추천·광고 ============ -->
+  <rect x="40" y="76" width="420" height="290" rx="6" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.4"/>
+  <text x="250" y="104" text-anchor="middle" font-size="13" font-weight="bold" fill="#1d4ed8">Search · Recommendation · Advertising</text>
+  <text x="250" y="124" text-anchor="middle" font-size="11.5" fill="#6b7280">사용자 1명 × 아이템 N개</text>
+
+  <text x="250" y="150" text-anchor="middle" font-size="11" fill="#9ca3af">아이템 (수십만)</text>
+  <text x="82" y="235" text-anchor="middle" font-size="11" fill="#9ca3af" transform="rotate(-90 82 235)">사용자</text>
+
+  <!-- grid rows y=160,191,222,253,284 / cols x=100,151,202,253,304,355 -->
+  <g stroke="#e5e7eb" stroke-width="1" fill="#ffffff">
+    <rect x="100" y="160" width="46" height="26" rx="3"/><rect x="151" y="160" width="46" height="26" rx="3"/><rect x="202" y="160" width="46" height="26" rx="3"/><rect x="253" y="160" width="46" height="26" rx="3"/><rect x="304" y="160" width="46" height="26" rx="3"/><rect x="355" y="160" width="46" height="26" rx="3"/>
+    <rect x="100" y="191" width="46" height="26" rx="3"/><rect x="151" y="191" width="46" height="26" rx="3"/><rect x="202" y="191" width="46" height="26" rx="3"/><rect x="253" y="191" width="46" height="26" rx="3"/><rect x="304" y="191" width="46" height="26" rx="3"/><rect x="355" y="191" width="46" height="26" rx="3"/>
+    <rect x="100" y="253" width="46" height="26" rx="3"/><rect x="151" y="253" width="46" height="26" rx="3"/><rect x="202" y="253" width="46" height="26" rx="3"/><rect x="253" y="253" width="46" height="26" rx="3"/><rect x="304" y="253" width="46" height="26" rx="3"/><rect x="355" y="253" width="46" height="26" rx="3"/>
+    <rect x="100" y="284" width="46" height="26" rx="3"/><rect x="151" y="284" width="46" height="26" rx="3"/><rect x="202" y="284" width="46" height="26" rx="3"/><rect x="253" y="284" width="46" height="26" rx="3"/><rect x="304" y="284" width="46" height="26" rx="3"/><rect x="355" y="284" width="46" height="26" rx="3"/>
+  </g>
+  <g stroke="#2563eb" stroke-width="1.6" fill="#dbeafe">
+    <rect x="100" y="222" width="46" height="26" rx="3"/><rect x="151" y="222" width="46" height="26" rx="3"/><rect x="202" y="222" width="46" height="26" rx="3"/><rect x="253" y="222" width="46" height="26" rx="3"/><rect x="304" y="222" width="46" height="26" rx="3"/><rect x="355" y="222" width="46" height="26" rx="3"/>
+  </g>
+  <line x1="408" y1="235" x2="436" y2="235" stroke="#2563eb" stroke-width="1.6" marker-end="url(#arrBlue)"/>
+
+  <text x="250" y="336" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1d4ed8">행 하나를 정렬한다</text>
+  <text x="250" y="354" text-anchor="middle" font-size="11" fill="#6b7280">사용자가 왔을 때만 · 100ms 안에</text>
+
+  <!-- ============ 오른쪽: 마케팅 ============ -->
+  <rect x="520" y="76" width="420" height="290" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.4"/>
+  <text x="730" y="104" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400e">Marketing</text>
+  <text x="730" y="124" text-anchor="middle" font-size="11.5" fill="#a16207">캠페인 1개 × 사용자 N명</text>
+
+  <text x="730" y="150" text-anchor="middle" font-size="11" fill="#a16207">캠페인</text>
+  <text x="638" y="235" text-anchor="middle" font-size="11" fill="#a16207" transform="rotate(-90 638 235)">사용자 (수백만)</text>
+
+  <!-- grid cols x=656,707,758 -->
+  <g stroke="#e5e7eb" stroke-width="1" fill="#ffffff">
+    <rect x="656" y="160" width="46" height="26" rx="3"/><rect x="758" y="160" width="46" height="26" rx="3"/>
+    <rect x="656" y="191" width="46" height="26" rx="3"/><rect x="758" y="191" width="46" height="26" rx="3"/>
+    <rect x="656" y="222" width="46" height="26" rx="3"/><rect x="758" y="222" width="46" height="26" rx="3"/>
+    <rect x="656" y="253" width="46" height="26" rx="3"/><rect x="758" y="253" width="46" height="26" rx="3"/>
+    <rect x="656" y="284" width="46" height="26" rx="3"/><rect x="758" y="284" width="46" height="26" rx="3"/>
+  </g>
+  <g stroke="#d97706" stroke-width="1.6" fill="#fef3c7">
+    <rect x="707" y="160" width="46" height="26" rx="3"/>
+    <rect x="707" y="191" width="46" height="26" rx="3"/>
+    <rect x="707" y="222" width="46" height="26" rx="3"/>
+    <rect x="707" y="253" width="46" height="26" rx="3"/>
+    <rect x="707" y="284" width="46" height="26" rx="3"/>
+  </g>
+  <line x1="822" y1="164" x2="822" y2="302" stroke="#d97706" stroke-width="1.6" marker-end="url(#arrAmber)"/>
+
+  <text x="730" y="336" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#92400e">열 하나에서 고른다</text>
+  <text x="730" y="354" text-anchor="middle" font-size="11" fill="#a16207">사용자가 없어도 시작 · 시간~일 단위</text>
+
+  <text x="40" y="390" font-size="11" fill="#6b7280">정렬 대상이 아이템에서 사람으로 바뀌면 트리거·시점·비용·되돌릴 수 있는지가 전부 따라 바뀐다.</text>
+</svg>

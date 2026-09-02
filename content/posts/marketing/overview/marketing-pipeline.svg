@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 440" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <rect x="0" y="0" width="980" height="440" fill="#ffffff"/>
+
+  <text x="40" y="34" font-size="15" font-weight="bold" fill="#374151">파이프라인 — 앞의 두 칸은 같고, 세 번째 칸부터 갈라진다</text>
+  <text x="40" y="56" font-size="11.5" fill="#6b7280">광고의 깔때기가 그대로 오지만, 예측하는 값과 마지막에 정하는 것이 다르다.</text>
+
+  <!-- ============ 광고 파이프라인 (참고) ============ -->
+  <text x="50" y="86" font-size="11.5" font-weight="bold" fill="#9ca3af">Advertising (참고)</text>
+  <g fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.2">
+    <rect x="50" y="94" width="140" height="56" rx="5"/>
+    <rect x="198" y="94" width="140" height="56" rx="5"/>
+    <rect x="346" y="94" width="140" height="56" rx="5"/>
+    <rect x="494" y="94" width="140" height="56" rx="5"/>
+    <rect x="642" y="94" width="140" height="56" rx="5"/>
+    <rect x="790" y="94" width="140" height="56" rx="5"/>
+  </g>
+  <g text-anchor="middle" fill="#6b7280">
+    <text x="120" y="118" font-size="12" font-weight="bold">Ad Request</text><text x="120" y="137" font-size="10.5">노출 요청</text>
+    <text x="268" y="118" font-size="12" font-weight="bold">Targeting</text><text x="268" y="137" font-size="10.5">후보 선별</text>
+    <text x="416" y="118" font-size="12" font-weight="bold">Prediction</text><text x="416" y="137" font-size="10.5">pCTR · pCVR</text>
+    <text x="564" y="118" font-size="12" font-weight="bold">Auction</text><text x="564" y="137" font-size="10.5">순위 + 가격</text>
+    <text x="712" y="118" font-size="12" font-weight="bold">Delivery</text><text x="712" y="137" font-size="10.5">페이싱 · 빈도</text>
+    <text x="860" y="118" font-size="12" font-weight="bold">Measurement</text><text x="860" y="137" font-size="10.5">귀속 · 정산</text>
+  </g>
+
+  <!-- ============ 대응선 + 차이 주석 ============ -->
+  <g stroke="#d1d5db" stroke-width="1.2" stroke-dasharray="4 4">
+    <line x1="120" y1="150" x2="120" y2="176"/><line x1="120" y1="222" x2="120" y2="252"/>
+    <line x1="268" y1="150" x2="268" y2="176"/><line x1="268" y1="222" x2="268" y2="252"/>
+    <line x1="416" y1="150" x2="416" y2="176"/><line x1="416" y1="222" x2="416" y2="252"/>
+    <line x1="564" y1="150" x2="564" y2="176"/><line x1="564" y1="222" x2="564" y2="252"/>
+    <line x1="712" y1="150" x2="712" y2="176"/><line x1="712" y1="222" x2="712" y2="252"/>
+    <line x1="860" y1="150" x2="860" y2="176"/><line x1="860" y1="222" x2="860" y2="252"/>
+  </g>
+  <g text-anchor="middle" font-size="10.5" fill="#b45309">
+    <text x="120" y="192">요청이 없다</text><text x="120" y="208">우리가 시작한다</text>
+    <text x="268" y="200" fill="#9ca3af">구조가 같다</text>
+    <text x="416" y="192">확률 → 차이</text><text x="416" y="208">관측 불가능한 목표</text>
+    <text x="564" y="192">경매 → 배분</text><text x="564" y="208">물어볼 상대가 없다</text>
+    <text x="712" y="192">결정 변수 추가</text><text x="712" y="208">언제 보낼까</text>
+    <text x="860" y="192">사후 리포트가 아니라</text><text x="860" y="208">학습 데이터 생산</text>
+  </g>
+
+  <!-- ============ 마케팅 파이프라인 ============ -->
+  <text x="50" y="246" font-size="11.5" font-weight="bold" fill="#92400e">Marketing</text>
+  <g stroke-width="1.6">
+    <rect x="50" y="252" width="140" height="56" rx="5" fill="#fffbeb" stroke="#d97706"/>
+    <rect x="198" y="252" width="140" height="56" rx="5" fill="#fffbeb" stroke="#d97706"/>
+    <rect x="346" y="252" width="140" height="56" rx="5" fill="#dbeafe" stroke="#2563eb"/>
+    <rect x="494" y="252" width="140" height="56" rx="5" fill="#dbeafe" stroke="#2563eb"/>
+    <rect x="642" y="252" width="140" height="56" rx="5" fill="#fffbeb" stroke="#d97706"/>
+    <rect x="790" y="252" width="140" height="56" rx="5" fill="#dbeafe" stroke="#2563eb"/>
+  </g>
+  <g text-anchor="middle">
+    <text x="120" y="276" font-size="12" font-weight="bold" fill="#92400e">Campaign</text><text x="120" y="295" font-size="10.5" fill="#a16207">처치 · 예산 정의</text>
+    <text x="268" y="276" font-size="12" font-weight="bold" fill="#92400e">Audience</text><text x="268" y="295" font-size="10.5" fill="#a16207">자격 · 동의 필터</text>
+    <text x="416" y="276" font-size="12" font-weight="bold" fill="#1d4ed8">Uplift</text><text x="416" y="295" font-size="10.5" fill="#1d4ed8">증분 예측</text>
+    <text x="564" y="276" font-size="12" font-weight="bold" fill="#1d4ed8">Allocation</text><text x="564" y="295" font-size="10.5" fill="#1d4ed8">제약 하 배분</text>
+    <text x="712" y="276" font-size="12" font-weight="bold" fill="#92400e">Delivery</text><text x="712" y="295" font-size="10.5" fill="#a16207">채널 · 시점 · 피로도</text>
+    <text x="860" y="276" font-size="12" font-weight="bold" fill="#1d4ed8">Measurement</text><text x="860" y="295" font-size="10.5" fill="#1d4ed8">홀드아웃 대조</text>
+  </g>
+
+  <text x="50" y="342" font-size="11" fill="#6b7280">· 파란 칸이 검색·추천·광고에 대응물이 없거나, 이름만 같고 성격이 다른 단계다</text>
+  <text x="50" y="364" font-size="11" fill="#6b7280">· pCTR은 「이 광고가 눌릴 확률」이지만, uplift는 「보냈을 때와 안 보냈을 때의 차이」 — 한 사람에게서 관측할 수 없는 값이다</text>
+  <text x="50" y="386" font-size="11" fill="#6b7280">· 광고의 Auction 자리에 마케팅은 Allocation이 온다. 대상도 예산도 우리 것이라 값을 물어볼 상대가 없고, 문제는 정렬이 아니라 제약 하 선택이 된다</text>
+  <text x="50" y="408" font-size="11" fill="#6b7280">· 측정은 마지막 칸이면서 첫 칸이다 — 홀드아웃이 만든 로그가 다음 캠페인의 Uplift 모델 학습 데이터가 된다</text>
+</svg>

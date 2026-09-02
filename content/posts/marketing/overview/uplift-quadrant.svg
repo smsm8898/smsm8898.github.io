@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 490" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <rect x="0" y="0" width="980" height="490" fill="#ffffff"/>
+
+  <text x="40" y="34" font-size="15" font-weight="bold" fill="#374151">왜 「살 확률」로 고르면 안 되는가</text>
+  <text x="40" y="56" font-size="11.5" fill="#6b7280">휴면 사용자에게 10% 쿠폰을 보낸다. 같은 명단 안에 성격이 반대인 네 종류가 섞여 있다.</text>
+
+  <!-- 열 머리 -->
+  <text x="385" y="96" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#6b7280">쿠폰을 주면 → 안 산다</text>
+  <text x="735" y="96" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#6b7280">쿠폰을 주면 → 산다</text>
+
+  <!-- 행 머리 -->
+  <text x="188" y="175" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#6b7280" transform="rotate(-90 188 175)">쿠폰 없어도 산다</text>
+  <text x="188" y="325" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#6b7280" transform="rotate(-90 188 325)">쿠폰 없으면 안 산다</text>
+
+  <!-- 좌상: 잠자는 개 -->
+  <rect x="220" y="110" width="330" height="130" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.8"/>
+  <text x="385" y="142" text-anchor="middle" font-size="14" font-weight="bold" fill="#b91c1c">잠자는 개 (Sleeping Dogs)</text>
+  <text x="385" y="168" text-anchor="middle" font-size="11.5" fill="#dc2626">보내지 않으면 사는데, 보내면 안 산다</text>
+  <text x="385" y="188" text-anchor="middle" font-size="11.5" fill="#dc2626">할인 소식에 구매를 미루거나, 알림을 끈다</text>
+  <text x="385" y="216" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#b91c1c">증분 &lt; 0 — 보내면 손해다</text>
+
+  <!-- 우상: 어차피 사는 사람 -->
+  <rect x="570" y="110" width="330" height="130" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.8"/>
+  <text x="735" y="142" text-anchor="middle" font-size="14" font-weight="bold" fill="#4b5563">어차피 사는 사람 (Sure Things)</text>
+  <text x="735" y="168" text-anchor="middle" font-size="11.5" fill="#6b7280">보내든 안 보내든 산다</text>
+  <text x="735" y="188" text-anchor="middle" font-size="11.5" fill="#6b7280">살 확률(pCVR)이 가장 높은 집단</text>
+  <text x="735" y="216" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#4b5563">증분 ≈ 0 — 마진만 깎인다</text>
+
+  <!-- 좌하: 설득 불가 -->
+  <rect x="220" y="260" width="330" height="130" rx="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.8"/>
+  <text x="385" y="292" text-anchor="middle" font-size="14" font-weight="bold" fill="#4b5563">설득 불가 (Lost Causes)</text>
+  <text x="385" y="318" text-anchor="middle" font-size="11.5" fill="#6b7280">보내든 안 보내든 안 산다</text>
+  <text x="385" y="338" text-anchor="middle" font-size="11.5" fill="#6b7280">이미 떠난 사람 · 애초에 관심이 없는 사람</text>
+  <text x="385" y="366" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#4b5563">증분 ≈ 0 — 발송 비용만 든다</text>
+
+  <!-- 우하: 설득 가능 -->
+  <rect x="570" y="260" width="330" height="130" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2.4"/>
+  <text x="735" y="292" text-anchor="middle" font-size="14" font-weight="bold" fill="#1d4ed8">설득 가능 (Persuadables)</text>
+  <text x="735" y="318" text-anchor="middle" font-size="11.5" fill="#1d4ed8">보내지 않으면 안 사고, 보내면 산다</text>
+  <text x="735" y="338" text-anchor="middle" font-size="11.5" fill="#1d4ed8">지금은 안 사는 사람 — 확률로는 하위권</text>
+  <text x="735" y="366" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1d4ed8">증분 &gt; 0 — 예산은 여기에만</text>
+
+  <!-- 하단 주석 -->
+  <rect x="220" y="412" width="680" height="62" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.4"/>
+  <text x="240" y="437" font-size="11.5" fill="#92400e">살 확률(pCVR) 순으로 정렬하면 위쪽 두 칸이 먼저 뽑힌다 — 어차피 사는 사람의 구매 확률이 가장 높기 때문이다.</text>
+  <text x="240" y="459" font-size="11.5" fill="#92400e">필요한 점수는 확률이 아니라 차이다: P(구매 | 보냄) − P(구매 | 안 보냄). 한 사람에게서 두 항을 동시에 볼 수 없다는 것이 문제의 전부다.</text>
+</svg>
