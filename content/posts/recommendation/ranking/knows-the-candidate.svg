@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 400" width="980" height="400" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <defs>
+    <marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+  <rect width="980" height="400" fill="#ffffff"/>
+
+  <text x="255" y="40" font-size="14" font-weight="600" fill="#111827" text-anchor="middle">후보 생성 — 후보를 모른다</text>
+  <text x="725" y="40" font-size="14" font-weight="600" fill="#111827" text-anchor="middle">랭킹 — 후보를 안다</text>
+  <rect x="40" y="56" width="430" height="300" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+  <rect x="510" y="56" width="430" height="300" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+
+  <!-- left: history -->
+  <text x="95" y="112" font-size="11" fill="#9ca3af">유저 이력</text>
+  <g font-size="11" text-anchor="middle">
+    <rect x="95"  y="126" width="56" height="32" rx="4" fill="#eff6ff" stroke="#2563eb"/><text x="123" y="147" fill="#2563eb">등산</text>
+    <rect x="161" y="126" width="56" height="32" rx="4" fill="#eff6ff" stroke="#2563eb"/><text x="189" y="147" fill="#2563eb">등산</text>
+    <rect x="227" y="126" width="56" height="32" rx="4" fill="#fffbeb" stroke="#d97706"/><text x="255" y="147" fill="#d97706">요리</text>
+    <rect x="293" y="126" width="56" height="32" rx="4" fill="#fffbeb" stroke="#d97706"/><text x="321" y="147" fill="#d97706">요리</text>
+    <rect x="359" y="126" width="56" height="32" rx="4" fill="#f5f3ff" stroke="#7c3aed"/><text x="387" y="147" fill="#7c3aed">게임</text>
+  </g>
+  <path d="M255 158 V 176" stroke="#9ca3af" fill="none" marker-end="url(#ah2)"/>
+  <rect x="175" y="180" width="160" height="30" rx="4" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="255" y="200" font-size="12" fill="#111827" text-anchor="middle">인코더</text>
+  <path d="M255 210 V 228" stroke="#9ca3af" fill="none" marker-end="url(#ah2)"/>
+  <rect x="175" y="232" width="160" height="30" rx="4" fill="#ffffff" stroke="#111827"/>
+  <text x="255" y="252" font-size="12" fill="#111827" text-anchor="middle">유저 벡터 하나 (고정)</text>
+  <text x="255" y="300" font-size="12" fill="#dc2626" text-anchor="middle">무엇을 점수 매길지 모른 채 압축한다</text>
+  <text x="255" y="322" font-size="11" fill="#9ca3af" text-anchor="middle">그래서 벡터 K개 같은 우회로가 필요했다</text>
+
+  <!-- right: candidate A -->
+  <text x="565" y="82" font-size="12" font-weight="600" fill="#111827">후보 = 등산화</text>
+  <g fill="#2563eb">
+    <rect x="583" y="100" width="10" height="24" rx="2"/>
+    <rect x="649" y="106" width="10" height="18" rx="2"/>
+    <rect x="715" y="120" width="10" height="4"  rx="2"/>
+    <rect x="781" y="120" width="10" height="4"  rx="2"/>
+    <rect x="847" y="118" width="10" height="6"  rx="2"/>
+  </g>
+  <g font-size="11" text-anchor="middle">
+    <rect x="565" y="126" width="56" height="32" rx="4" fill="#eff6ff" stroke="#2563eb"/><text x="593" y="147" fill="#2563eb">등산</text>
+    <rect x="631" y="126" width="56" height="32" rx="4" fill="#eff6ff" stroke="#2563eb"/><text x="659" y="147" fill="#2563eb">등산</text>
+    <rect x="697" y="126" width="56" height="32" rx="4" fill="#f9fafb" stroke="#e5e7eb"/><text x="725" y="147" fill="#9ca3af">요리</text>
+    <rect x="763" y="126" width="56" height="32" rx="4" fill="#f9fafb" stroke="#e5e7eb"/><text x="791" y="147" fill="#9ca3af">요리</text>
+    <rect x="829" y="126" width="56" height="32" rx="4" fill="#f9fafb" stroke="#e5e7eb"/><text x="857" y="147" fill="#9ca3af">게임</text>
+  </g>
+
+  <!-- right: candidate B -->
+  <text x="565" y="206" font-size="12" font-weight="600" fill="#111827">후보 = 프라이팬</text>
+  <g fill="#d97706">
+    <rect x="583" y="244" width="10" height="4"  rx="2"/>
+    <rect x="649" y="244" width="10" height="4"  rx="2"/>
+    <rect x="715" y="224" width="10" height="24" rx="2"/>
+    <rect x="781" y="230" width="10" height="18" rx="2"/>
+    <rect x="847" y="243" width="10" height="5"  rx="2"/>
+  </g>
+  <g font-size="11" text-anchor="middle">
+    <rect x="565" y="250" width="56" height="32" rx="4" fill="#f9fafb" stroke="#e5e7eb"/><text x="593" y="271" fill="#9ca3af">등산</text>
+    <rect x="631" y="250" width="56" height="32" rx="4" fill="#f9fafb" stroke="#e5e7eb"/><text x="659" y="271" fill="#9ca3af">등산</text>
+    <rect x="697" y="250" width="56" height="32" rx="4" fill="#fffbeb" stroke="#d97706"/><text x="725" y="271" fill="#d97706">요리</text>
+    <rect x="763" y="250" width="56" height="32" rx="4" fill="#fffbeb" stroke="#d97706"/><text x="791" y="271" fill="#d97706">요리</text>
+    <rect x="829" y="250" width="56" height="32" rx="4" fill="#f9fafb" stroke="#e5e7eb"/><text x="857" y="271" fill="#9ca3af">게임</text>
+  </g>
+  <text x="725" y="320" font-size="12" fill="#059669" text-anchor="middle">같은 이력을 후보마다 다르게 읽는다 — 막대가 가중치다</text>
+
+  <text x="489" y="382" font-size="12" fill="#9ca3af" text-anchor="middle">두 단계를 가르는 것은 모델 크기가 아니라, 점수를 매길 대상을 이미 아느냐이다.</text>
+</svg>
