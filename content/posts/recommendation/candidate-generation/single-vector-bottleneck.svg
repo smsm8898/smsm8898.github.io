@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 460" width="980" height="460" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif">
+  <rect width="980" height="460" fill="#ffffff"/>
+
+  <text x="255" y="40" font-size="14" font-weight="600" fill="#111827" text-anchor="middle">유저를 벡터 하나로</text>
+  <text x="725" y="40" font-size="14" font-weight="600" fill="#111827" text-anchor="middle">유저를 벡터 K개로</text>
+
+  <rect x="40" y="56" width="430" height="340" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+  <rect x="510" y="56" width="430" height="340" rx="8" fill="#ffffff" stroke="#e5e7eb"/>
+
+  <!-- ===== left: clusters ===== -->
+  <circle cx="150" cy="150" r="52" fill="#f9fafb" stroke="#e5e7eb"/>
+  <circle cx="350" cy="160" r="52" fill="#f9fafb" stroke="#e5e7eb"/>
+  <circle cx="250" cy="320" r="52" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="150" y="88" font-size="12" fill="#6b7280" text-anchor="middle">등산</text>
+  <text x="350" y="98" font-size="12" fill="#6b7280" text-anchor="middle">요리</text>
+  <text x="250" y="258" font-size="12" fill="#6b7280" text-anchor="middle">게임</text>
+  <g fill="#9ca3af">
+    <circle cx="128" cy="132" r="4"/><circle cx="160" cy="120" r="4"/><circle cx="175" cy="148" r="4"/>
+    <circle cx="140" cy="170" r="4"/><circle cx="112" cy="155" r="4"/><circle cx="165" cy="175" r="4"/><circle cx="148" cy="148" r="4"/>
+    <circle cx="328" cy="142" r="4"/><circle cx="360" cy="130" r="4"/><circle cx="375" cy="158" r="4"/>
+    <circle cx="340" cy="180" r="4"/><circle cx="312" cy="165" r="4"/><circle cx="365" cy="185" r="4"/><circle cx="348" cy="158" r="4"/>
+    <circle cx="228" cy="302" r="4"/><circle cx="260" cy="290" r="4"/><circle cx="275" cy="318" r="4"/>
+    <circle cx="240" cy="340" r="4"/><circle cx="212" cy="325" r="4"/><circle cx="265" cy="345" r="4"/><circle cx="248" cy="318" r="4"/>
+  </g>
+  <circle cx="250" cy="210" r="46" fill="none" stroke="#dc2626" stroke-dasharray="5 4"/>
+  <circle cx="250" cy="200" r="6" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
+  <text x="250" y="228" font-size="11" fill="#dc2626" text-anchor="middle">아무것도 없다</text>
+
+  <!-- ===== right: clusters ===== -->
+  <circle cx="620" cy="150" r="52" fill="#f9fafb" stroke="#e5e7eb"/>
+  <circle cx="820" cy="160" r="52" fill="#f9fafb" stroke="#e5e7eb"/>
+  <circle cx="720" cy="320" r="52" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="620" y="88" font-size="12" fill="#6b7280" text-anchor="middle">등산</text>
+  <text x="820" y="98" font-size="12" fill="#6b7280" text-anchor="middle">요리</text>
+  <text x="720" y="258" font-size="12" fill="#6b7280" text-anchor="middle">게임</text>
+  <circle cx="620" cy="150" r="64" fill="none" stroke="#059669" stroke-dasharray="5 4"/>
+  <circle cx="820" cy="160" r="64" fill="none" stroke="#059669" stroke-dasharray="5 4"/>
+  <circle cx="720" cy="320" r="64" fill="none" stroke="#059669" stroke-dasharray="5 4"/>
+  <g fill="#9ca3af">
+    <circle cx="598" cy="132" r="4"/><circle cx="630" cy="120" r="4"/><circle cx="645" cy="148" r="4"/>
+    <circle cx="610" cy="170" r="4"/><circle cx="582" cy="155" r="4"/><circle cx="635" cy="175" r="4"/>
+    <circle cx="798" cy="142" r="4"/><circle cx="830" cy="130" r="4"/><circle cx="845" cy="158" r="4"/>
+    <circle cx="810" cy="180" r="4"/><circle cx="782" cy="165" r="4"/><circle cx="835" cy="185" r="4"/>
+    <circle cx="698" cy="302" r="4"/><circle cx="730" cy="290" r="4"/><circle cx="745" cy="318" r="4"/>
+    <circle cx="710" cy="340" r="4"/><circle cx="682" cy="325" r="4"/><circle cx="735" cy="345" r="4"/>
+  </g>
+  <circle cx="620" cy="150" r="6" fill="#059669" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="820" cy="160" r="6" fill="#059669" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="720" cy="320" r="6" fill="#059669" stroke="#ffffff" stroke-width="2"/>
+
+  <text x="255" y="418" font-size="12" fill="#111827" text-anchor="middle">세 관심사의 평균은 어느 관심사도 아니다</text>
+  <text x="725" y="418" font-size="12" fill="#111827" text-anchor="middle">관심사마다 따로 질의한다 — 채널이 K배로 늘어난다</text>
+  <text x="489" y="446" font-size="12" fill="#9ca3af" text-anchor="middle">회색 점 = 아이템 · 색 점 = 유저 벡터 · 점선 = ANN 탐색 반경</text>
+</svg>
